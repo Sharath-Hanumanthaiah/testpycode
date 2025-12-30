@@ -6,9 +6,10 @@
       "description": "Given numbers should be added and the output shared.",
       "conditions": [
         "Input numbers can be negative.",
-        "Output can be negative or positive."
+        "Output can be negative or positive.",
+        "There should not be zero as an input."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "subtraction",
@@ -17,9 +18,10 @@
       "conditions": [
         "The greater number must be subtracted by the smaller one.",
         "Output can be negative or positive.",
-        "Input numbers can be negative or positive."
+        "Input numbers can be negative or positive.",
+        "There should not be zero as an input."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "multiplication",
@@ -28,9 +30,10 @@
       "conditions": [
         "Output can be negative or positive.",
         "Input numbers can be negative or positive.",
-        "Output should not be decimal."
+        "Output should not be decimal.",
+        "There should not be zero as an input."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "division",
@@ -39,11 +42,12 @@
       "conditions": [
         "Should not be divided by zero.",
         "Always handle the exception of dividing by zero.",
-        "Input numbers can be negative or positive."
+        "Input numbers can be negative or positive.",
+        "There should not be zero as an input."
       ],
-      "change_status": ""
+      "change_status": "updated"
     }
   ],
-  "last_updated": "2025-12-30T15:12:57.735181",
+  "last_updated": "2025-12-30T15:15:12.901443",
   "version": "1.0"
 }
