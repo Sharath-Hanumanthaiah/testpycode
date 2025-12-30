@@ -1,0 +1,36 @@
+{
+  "breakdowns": [
+    {
+      "id": "addition",
+      "header": "Addition",
+      "description": "Given numbers should be added and the output shared.",
+      "conditions": [],
+      "change_status": "new"
+    },
+    {
+      "id": "subtraction",
+      "header": "Subtraction",
+      "description": "Given two numbers, the greater number should be subtracted by the smaller one.",
+      "conditions": [
+        "The greater number must be subtracted by the smaller one."
+      ],
+      "change_status": "new"
+    },
+    {
+      "id": "multiplication",
+      "header": "Multiplication",
+      "description": "Given two numbers, multiply the numbers and share the output.",
+      "conditions": [],
+      "change_status": "new"
+    },
+    {
+      "id": "division",
+      "header": "Division",
+      "description": "Given two numbers, divide the numbers and get the output.",
+      "conditions": [],
+      "change_status": "new"
+    }
+  ],
+  "last_updated": "2025-12-30T11:30:04.677807",
+  "version": "1.0"
+}
