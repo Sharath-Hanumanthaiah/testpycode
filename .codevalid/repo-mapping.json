@@ -1,0 +1,20 @@
+{
+  "addition": {
+    "implementation": [],
+    "missing_implementations": []
+  },
+  "subtraction": {
+    "implementation": [],
+    "missing_implementations": [
+      "The greater number must be subtracted by the smaller one."
+    ]
+  },
+  "multiplication": {
+    "implementation": [],
+    "missing_implementations": []
+  },
+  "division": {
+    "implementation": [],
+    "missing_implementations": []
+  }
+}
