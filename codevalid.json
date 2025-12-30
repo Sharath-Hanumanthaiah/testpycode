@@ -4,33 +4,46 @@
       "id": "addition",
       "header": "Addition",
       "description": "Given numbers should be added and the output shared.",
-      "conditions": [],
-      "change_status": "new"
+      "conditions": [
+        "Input numbers can be negative.",
+        "Output can be negative or positive."
+      ],
+      "change_status": "updated"
     },
     {
       "id": "subtraction",
       "header": "Subtraction",
       "description": "Given two numbers, the greater number should be subtracted by the smaller one.",
       "conditions": [
-        "The greater number must be subtracted by the smaller one."
+        "The greater number must be subtracted by the smaller one.",
+        "Output can be negative or positive.",
+        "Input numbers can be negative or positive."
       ],
-      "change_status": "new"
+      "change_status": "updated"
     },
     {
       "id": "multiplication",
       "header": "Multiplication",
       "description": "Given two numbers, multiply the numbers and share the output.",
-      "conditions": [],
-      "change_status": "new"
+      "conditions": [
+        "Output can be negative or positive.",
+        "Input numbers can be negative or positive.",
+        "Output should not be decimal."
+      ],
+      "change_status": "updated"
     },
     {
       "id": "division",
       "header": "Division",
       "description": "Given two numbers, divide the numbers and get the output.",
-      "conditions": [],
-      "change_status": "new"
+      "conditions": [
+        "Should not be divided by zero.",
+        "Always handle the exception of dividing by zero.",
+        "Input numbers can be negative or positive."
+      ],
+      "change_status": "updated"
     }
   ],
-  "last_updated": "2025-12-30T11:30:04.677807",
+  "last_updated": "2025-12-30T12:47:59.578697",
   "version": "1.0"
 }
