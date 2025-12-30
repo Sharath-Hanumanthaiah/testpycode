@@ -1,20 +1,33 @@
 {
   "addition": {
     "implementation": [],
-    "missing_implementations": []
+    "missing_implementations": [
+      "Input numbers can be negative.",
+      "Output can be negative or positive."
+    ]
   },
   "subtraction": {
     "implementation": [],
     "missing_implementations": [
-      "The greater number must be subtracted by the smaller one."
+      "The greater number must be subtracted by the smaller one.",
+      "Output can be negative or positive.",
+      "Input numbers can be negative or positive."
     ]
   },
   "multiplication": {
     "implementation": [],
-    "missing_implementations": []
+    "missing_implementations": [
+      "Output can be negative or positive.",
+      "Input numbers can be negative or positive.",
+      "Output should not be decimal."
+    ]
   },
   "division": {
     "implementation": [],
-    "missing_implementations": []
+    "missing_implementations": [
+      "Should not be divided by zero.",
+      "Always handle the exception of dividing by zero.",
+      "Input numbers can be negative or positive."
+    ]
   }
 }
