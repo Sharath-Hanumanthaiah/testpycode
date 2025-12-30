@@ -6,8 +6,7 @@
       "description": "Given numbers should be added and the output shared.",
       "conditions": [
         "Input numbers can be negative.",
-        "Output can be negative or positive.",
-        "There should not be zero as an input."
+        "Output can be negative or positive."
       ],
       "change_status": "updated"
     },
@@ -16,10 +15,8 @@
       "header": "Subtraction",
       "description": "Given two numbers, the greater number should be subtracted by the smaller one.",
       "conditions": [
-        "The greater number must be subtracted by the smaller one.",
         "Output can be negative or positive.",
-        "Input numbers can be negative or positive.",
-        "There should not be zero as an input."
+        "Input numbers can be negative or positive."
       ],
       "change_status": "updated"
     },
@@ -30,8 +27,7 @@
       "conditions": [
         "Output can be negative or positive.",
         "Input numbers can be negative or positive.",
-        "Output should not be decimal.",
-        "There should not be zero as an input."
+        "Output should not be decimal."
       ],
       "change_status": "updated"
     },
@@ -42,12 +38,11 @@
       "conditions": [
         "Should not be divided by zero.",
         "Always handle the exception of dividing by zero.",
-        "Input numbers can be negative or positive.",
-        "There should not be zero as an input."
+        "Input numbers can be negative or positive."
       ],
       "change_status": "updated"
     }
   ],
-  "last_updated": "2025-12-30T15:15:12.901443",
+  "last_updated": "2025-12-30T15:36:15.797447",
   "version": "1.0"
 }
