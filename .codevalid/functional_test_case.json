@@ -1,5 +1,513 @@
 {
-  "function": [],
+  "function": [
+    {
+      "implementation_id": "cal_py_addition_branch",
+      "test_cases": [
+        {
+          "id": "addition_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Tests addition of two positive integers using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 5 and 7 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is 12."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_negative_integers",
+          "name": "Addition of two negative integers",
+          "description": "Tests addition of two negative integers using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters -3 and -8 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is -11."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_positive_and_negative",
+          "name": "Addition of a positive and a negative integer",
+          "description": "Tests addition of a positive and a negative integer using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 10 and -4 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is 6."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_zero_and_positive",
+          "name": "Addition of zero and a positive integer",
+          "description": "Tests addition of zero and a positive integer using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 0 and 9 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is 9."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_zero_and_negative",
+          "name": "Addition of zero and a negative integer",
+          "description": "Tests addition of zero and a negative integer using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 0 and -7 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is -7."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_large_numbers",
+          "name": "Addition of large integers",
+          "description": "Tests addition of two large integers using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 1000000 and 2000000 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is 3000000."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_min_max_integers",
+          "name": "Addition of minimum and maximum integer values",
+          "description": "Tests addition of Python's minimum and maximum integer values using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters -2147483648 and 2147483647 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is -1."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_both_zeros",
+          "name": "Addition of two zeros",
+          "description": "Tests addition of two zeros using option 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 0 and 0 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Output is 0."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_non_integer_input_first",
+          "name": "Non-integer input for first number",
+          "description": "Tests behavior when the first number is not an integer.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters 'abc' as the first number and 5 as the second number.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the invalid input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_non_integer_input_second",
+          "name": "Non-integer input for second number",
+          "description": "Tests behavior when the second number is not an integer.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters 5 as the first number and 'xyz' as the second number.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the invalid input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_non_integer_input_both",
+          "name": "Non-integer input for both numbers",
+          "description": "Tests behavior when both numbers are not integers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters 'foo' and 'bar' as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the invalid input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_no_input",
+          "name": "No input provided for numbers",
+          "description": "Tests behavior when user provides no input for numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, presses Enter without entering numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the missing input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_float_input",
+          "name": "Floating point input for numbers",
+          "description": "Tests behavior when user enters floating point numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters 3.5 and 2.2 as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the invalid input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        },
+        {
+          "id": "addition_special_characters",
+          "name": "Special character input for numbers",
+          "description": "Tests behavior when user enters special characters as numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters '@' and '#' as the two numbers.",
+            "when": "Addition branch is executed.",
+            "then": "Program should handle the invalid input gracefully (e.g., show error or prompt again)."
+          },
+          "implementation_id": "cal_py_addition_branch"
+        }
+      ]
+    },
+    {
+      "implementation_id": "cal_py_main_loop",
+      "test_cases": [
+        {
+          "id": "multiplication_positive_integers",
+          "name": "Multiply two positive integers",
+          "description": "Verify multiplication of two positive integers returns the correct product.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 4 as the first number and 5 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 20."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_negative_and_positive",
+          "name": "Multiply a negative and a positive integer",
+          "description": "Verify multiplication of a negative and a positive integer returns the correct negative product.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters -3 as the first number and 7 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is -21."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_two_negatives",
+          "name": "Multiply two negative integers",
+          "description": "Verify multiplication of two negative integers returns a positive product.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters -2 as the first number and -8 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 16."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_with_zero",
+          "name": "Multiply by zero",
+          "description": "Verify multiplication by zero returns zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 0 as the first number and 123 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 0."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_large_numbers",
+          "name": "Multiply large numbers",
+          "description": "Verify multiplication of large numbers returns the correct product without overflow.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 1000000 as the first number and 2000000 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 2000000000000."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_floats",
+          "name": "Multiply floating point numbers",
+          "description": "Verify multiplication of floating point numbers returns the correct product.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 2.5 as the first number and 4.2 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 10.5."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_invalid_first_input",
+          "name": "Invalid first number input",
+          "description": "Verify the calculator handles non-numeric first input gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 3, enters 'abc' as the first number and 5 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "An error message is displayed and the user is prompted again."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_invalid_second_input",
+          "name": "Invalid second number input",
+          "description": "Verify the calculator handles non-numeric second input gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 3, enters 5 as the first number and 'xyz' as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "An error message is displayed and the user is prompted again."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_menu_invalid_choice",
+          "name": "Invalid menu choice",
+          "description": "Verify the calculator handles invalid menu choices gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 9 as the menu choice.",
+            "when": "The calculator loop processes the menu selection.",
+            "then": "An error message is displayed and the menu is shown again."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_exit_flow",
+          "name": "Exit after multiplication",
+          "description": "Verify the calculator exits correctly after performing multiplication and then selecting exit.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 2 and 3, then selects option 5.",
+            "when": "The calculator loop processes the multiplication and then exit option.",
+            "then": "The output is 6, followed by an exit message and the program terminates."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_minimum_integer",
+          "name": "Multiply with minimum integer value",
+          "description": "Verify multiplication with the minimum integer value supported by the system.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters -2147483648 as the first number and 1 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is -2147483648."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_maximum_integer",
+          "name": "Multiply with maximum integer value",
+          "description": "Verify multiplication with the maximum integer value supported by the system.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 2147483647 as the first number and 1 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "The output is 2147483647."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_blank_input",
+          "name": "Blank input for numbers",
+          "description": "Verify the calculator handles blank input for numbers gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 3, enters '' (blank) as the first number and 5 as the second number.",
+            "when": "The calculator loop processes the multiplication option.",
+            "then": "An error message is displayed and the user is prompted again."
+          },
+          "implementation_id": "cal_py_main_loop"
+        }
+      ]
+    },
+    {
+      "implementation_id": "calculator_division_branch_cal.py",
+      "test_cases": [
+        {
+          "id": "division_positive_integers",
+          "name": "test_division_positive_integers",
+          "description": "Divides two positive integers and returns the correct quotient.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 10, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 5.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_negative_dividend",
+          "name": "test_division_negative_dividend",
+          "description": "Divides a negative integer by a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -10, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is -5.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_negative_divisor",
+          "name": "test_division_negative_divisor",
+          "description": "Divides a positive integer by a negative integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 10, num2 = -2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is -5.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_both_negative",
+          "name": "test_division_both_negative",
+          "description": "Divides two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -10, num2 = -2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 5.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_float_result",
+          "name": "test_division_float_result",
+          "description": "Divides two integers resulting in a float.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 7, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 3.5"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_by_zero",
+          "name": "test_division_by_zero",
+          "description": "Attempts to divide by zero, which should raise an error or handle gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 10, num2 = 0",
+            "when": "Division operation is selected and numbers are input",
+            "then": "ZeroDivisionError is raised or an error message is displayed"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_zero_numerator",
+          "name": "test_division_zero_numerator",
+          "description": "Divides zero by a non-zero number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0, num2 = 5",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 0.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_float_inputs",
+          "name": "test_division_float_inputs",
+          "description": "Divides two floating point numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 7.5, num2 = 2.5",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 3.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_large_numbers",
+          "name": "test_division_large_numbers",
+          "description": "Divides two very large numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 1e18, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 5e17"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_small_numbers",
+          "name": "test_division_small_numbers",
+          "description": "Divides two very small numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 1e-10, num2 = 2e-10",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 0.5"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_non_numeric_input",
+          "name": "test_division_non_numeric_input",
+          "description": "Handles non-numeric input for either operand.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'abc', num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "ValueError is raised or an error message is displayed"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_non_numeric_input_both",
+          "name": "test_division_non_numeric_input_both",
+          "description": "Handles non-numeric input for both operands.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'abc', num2 = 'xyz'",
+            "when": "Division operation is selected and numbers are input",
+            "then": "ValueError is raised or an error message is displayed"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_min_int",
+          "name": "test_division_min_int",
+          "description": "Divides the minimum integer value by a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -2147483648, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is -1073741824.0"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        },
+        {
+          "id": "division_max_int",
+          "name": "test_division_max_int",
+          "description": "Divides the maximum integer value by a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 2147483647, num2 = 2",
+            "when": "Division operation is selected and numbers are input",
+            "then": "Output is 1073741823.5"
+          },
+          "implementation_id": "calculator_division_branch_cal.py"
+        }
+      ]
+    }
+  ],
   "component": [],
   "endpoint": []
 }
