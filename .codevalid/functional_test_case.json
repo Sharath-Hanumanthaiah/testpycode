@@ -518,6 +518,304 @@
           "implementation_id": "calculator_division_branch_cal.py"
         }
       ]
+    },
+    {
+      "implementation_id": "calculator_main_loop",
+      "test_cases": [
+        {
+          "id": "add_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Verify that the calculator correctly adds two positive integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters 5 and 7 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 12 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_negative_and_positive",
+          "name": "Addition of a negative and a positive integer",
+          "description": "Verify that the calculator correctly adds a negative and a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters -3 and 8 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 5 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_two_negatives",
+          "name": "Addition of two negative integers",
+          "description": "Verify that the calculator correctly adds two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters -4 and -6 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result -10 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_zero_and_number",
+          "name": "Addition of zero and a number",
+          "description": "Verify that the calculator correctly adds zero and another number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters 0 and 9 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 9 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_large_numbers",
+          "name": "Addition of large numbers",
+          "description": "Verify that the calculator correctly adds two large numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters 1000000 and 2000000 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 3000000 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_floats",
+          "name": "Addition of floating point numbers",
+          "description": "Verify that the calculator correctly adds two floating point numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters 2.5 and 3.7 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 6.2 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_boundary_values",
+          "name": "Addition of boundary values",
+          "description": "Verify that the calculator correctly adds the maximum and minimum representable float values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters sys.float_info.max and -sys.float_info.max as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 0.0 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "invalid_choice",
+          "name": "Invalid menu choice",
+          "description": "Verify that the calculator handles an invalid menu choice gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 9 as the menu choice.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message or prompt to enter a valid choice is displayed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "non_numeric_input",
+          "name": "Non-numeric input for numbers",
+          "description": "Verify that the calculator handles non-numeric input for numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters 'abc' and 5 as numbers.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message is displayed and the user is prompted to enter a valid number."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "exit_loop",
+          "name": "Exit the calculator loop",
+          "description": "Verify that the calculator exits the loop when the user selects the exit option.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects exit (choice 5).",
+            "when": "The main calculator loop processes the input.",
+            "then": "The loop terminates and the program ends."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "addition_after_other_operations",
+          "name": "Addition after performing other operations",
+          "description": "Verify that the calculator can perform addition after other operations have been performed.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User performs subtraction, multiplication, or division, then selects addition (choice 1) and enters 3 and 4.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The result 7 is printed."
+          },
+          "implementation_id": "calculator_main_loop"
+        },
+        {
+          "id": "add_empty_input",
+          "name": "Empty input for numbers",
+          "description": "Verify that the calculator handles empty input for numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters '' (empty string) for the first number and 2 for the second.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message is displayed and the user is prompted to enter a valid number."
+          },
+          "implementation_id": "calculator_main_loop"
+        }
+      ]
+    },
+    {
+      "implementation_id": "calculator_addition_operation",
+      "test_cases": [
+        {
+          "id": "addition_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Verify that the function correctly adds two positive integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 10, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 15"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_negative_integers",
+          "name": "Addition of two negative integers",
+          "description": "Verify that the function correctly adds two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -7, num2 = -3, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is -10"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_positive_and_negative",
+          "name": "Addition of a positive and a negative integer",
+          "description": "Verify that the function correctly adds a positive and a negative integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 8, num2 = -3, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 5"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_zero_and_integer",
+          "name": "Addition of zero and an integer",
+          "description": "Verify that the function correctly adds zero to an integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0, num2 = 12, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 12"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_integer_and_zero",
+          "name": "Addition of an integer and zero",
+          "description": "Verify that the function correctly adds an integer to zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 15, num2 = 0, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 15"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_large_numbers",
+          "name": "Addition of large numbers",
+          "description": "Verify that the function correctly adds two large integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 1000000000, num2 = 2000000000, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 3000000000"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_smallest_and_largest_int",
+          "name": "Addition of smallest and largest possible integers",
+          "description": "Verify that the function correctly adds the smallest and largest possible integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -2147483648, num2 = 2147483647, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is -1"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_floats",
+          "name": "Addition of floating point numbers",
+          "description": "Verify that the function correctly adds two floating point numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 2.5, num2 = 3.7, choice = 1",
+            "when": "The addition operation is called",
+            "then": "The result printed is 6.2"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_string_input",
+          "name": "Addition with string input",
+          "description": "Verify that the function handles string input for num1 or num2 gracefully (should raise an error or handle the case).",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'a', num2 = 5, choice = 1",
+            "when": "The addition operation is called",
+            "then": "An error is raised or an appropriate message is printed"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_none_input",
+          "name": "Addition with None input",
+          "description": "Verify that the function handles None input for num1 or num2 gracefully (should raise an error or handle the case).",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = None, num2 = 5, choice = 1",
+            "when": "The addition operation is called",
+            "then": "An error is raised or an appropriate message is printed"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_choice_not_one",
+          "name": "Choice is not 1",
+          "description": "Verify that the function does not perform addition or print a result when choice is not 1.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 10, choice = 2",
+            "when": "The addition operation is called",
+            "then": "No result is printed"
+          },
+          "implementation_id": "calculator_addition_operation"
+        },
+        {
+          "id": "addition_missing_argument",
+          "name": "Missing argument for num1 or num2",
+          "description": "Verify that the function handles missing arguments gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 is not provided, num2 = 5, choice = 1",
+            "when": "The addition operation is called",
+            "then": "An error is raised or an appropriate message is printed"
+          },
+          "implementation_id": "calculator_addition_operation"
+        }
+      ]
     }
   ],
   "component": [],
