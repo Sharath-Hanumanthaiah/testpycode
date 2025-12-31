@@ -1,19 +1,4 @@
-# project
-requirement (cal.py)
-1. Addition: given number should be added and share the output
-    - it can have negative number
-    - output can be negative or positive
-    - show the error if any of ther input is having the error
-2. Subtraction: given two number, greater number should be subtracted by the smaller one
-    - output should be negative or positive
-    - input number can be negative or positive
-3. Multiplication: given two number multiple the muber and share the output
-    - output can be negative or positive
-    - input can be negative or positive
-    - output should not decimal
-4. Division: given two number divide numbers and get the output
-    - should not be divided by zero
-    - always handle the exception of dividing by zero
-    - input number can be negative or positive
-
-
+Addition: given number should be added and share the output. it can have negative number. output can be negative or positive. show the error if any of the input is having the error. All inputs must be strictly validated and sanitized to accept only numeric values. Reject non-numeric or malformed input and return a generic error message.
+Subtraction: given two number, greater number should be subtracted by the smaller one. output should be negative or positive. input number can be negative or positive. All inputs must be strictly validated and sanitized to accept only numeric values.
+Multiplication: given two number multiple the muber and share the output. output can be negative or positive. input can be negative or positive. output should not decimal. All inputs must be strictly validated and sanitized to accept only numeric values.
+Division: given two number divide numbers and get the output. should not be divided by zero. always handle the exception of dividing by zero. input number can be negative or positive. All inputs must be strictly validated and sanitized to accept only numeric values.
