@@ -1,54 +1,54 @@
 {
   "addition": {
-    "implementation": [
-      {
-        "id": "calculation_addition_block_cal.py",
-        "name": "Addition block in main loop",
-        "file_path": "cal.py",
-        "type": "function",
-        "How_is_it_connected_to_implementation": "Handles the addition operation when the user selects 'Addition'. It reads two inputs, converts them to integers, and prints the sum.",
-        "pseudo_code": "LOOP forever:\n    Show menu\n    Get user choice\n    Get num1 from input\n    Get num2 from input\n    IF choice == 1 (Addition):\n        Print num1 + num2"
-      }
-    ],
+    "implementation": [],
     "missing_implementations": [
-      "All error messages should be generic and user-friendly.",
-      "Show the error if any of the input is having the error during addition.",
-      "Internal error details must not be exposed to users.",
-      "Detailed errors should be logged securely for debugging."
+      "Input numbers can be negative.",
+      "Output can be negative or positive.",
+      "Show the error if any of the input is having the error.",
+      "All inputs must be strictly validated and sanitized to accept only numeric values.",
+      "Reject non-numeric or malformed input and return a generic error message."
     ]
   },
   "subtraction": {
     "implementation": [
       {
-        "id": "main_loop_subtraction",
-        "name": "main calculator loop (subtraction branch)",
+        "id": "calculator_app_main_loop",
+        "name": "main_loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the subtraction operation as part of the main calculator loop. When the user selects option 2, it performs subtraction and prints the result.",
-        "pseudo_code": "LOOP forever:\n    Display menu options\n    Get user choice\n    Get first number\n    Get second number\n    IF choice is 2 (Subtraction):\n        Print the result of num1 - num2"
+        "How_is_it_connected_to_implementation": "Implements the subtraction operation as part of a calculator app. When the user selects option 2, it subtracts num2 from num1 and prints the result.",
+        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice as integer\n    GET num1 as integer input\n    GET num2 as integer input\n    IF choice == 1:\n        PRINT num1 + num2\n    ELSE IF choice == 2:\n        PRINT num1 - num2\n    ELSE IF choice == 3:\n        PRINT num1 * num2\n    ELSE IF choice == 4:\n        PRINT num1 / num2\n    ELSE IF choice == 5:\n        PRINT 'Exiting...'\n        BREAK\n    PRINT newline"
       }
     ],
     "missing_implementations": [
-      "All error messages should be generic and user-friendly.",
-      "Internal error details must not be exposed to users.",
-      "Detailed errors should be logged securely for debugging."
+      "Given two numbers, the greater number should be subtracted by the smaller one.",
+      "All inputs must be strictly validated and sanitized to accept only numeric values."
     ]
   },
   "multiplication": {
     "implementation": [],
     "missing_implementations": [
-      "Perform multiplication and handle errors as specified.",
-      "All error messages should be generic and user-friendly.",
-      "Internal error details must not be exposed to users.",
-      "Detailed errors should be logged securely for debugging."
+      "Output can be negative or positive.",
+      "Input numbers can be negative or positive.",
+      "Output should not be decimal.",
+      "All inputs must be strictly validated and sanitized to accept only numeric values."
     ]
   },
   "division": {
-    "implementation": [],
+    "implementation": [
+      {
+        "id": "main_calculator_loop",
+        "name": "main calculator loop",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "Implements the calculator logic, including division, in a while loop. Handles user input, operation selection, and output.",
+        "pseudo_code": "PRINT welcome message\nWHILE true:\n    PRINT menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice is 1:\n        PRINT sum\n    ELSE IF choice is 2:\n        PRINT difference\n    ELSE IF choice is 3:\n        PRINT product\n    ELSE IF choice is 4:\n        PRINT division result (num1 / num2)\n    ELSE IF choice is 5:\n        PRINT exit message\n        BREAK\n    PRINT newline"
+      }
+    ],
     "missing_implementations": [
-      "All error messages should be generic and user-friendly.",
-      "Internal error details must not be exposed to users.",
-      "Detailed errors should be logged securely for debugging."
+      "Should not be divided by zero.",
+      "Always handle the exception of dividing by zero.",
+      "All inputs must be strictly validated and sanitized to accept only numeric values."
     ]
   }
 }
