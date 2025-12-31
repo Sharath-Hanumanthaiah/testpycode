@@ -177,158 +177,146 @@
       "implementation_id": "cal_py_main_loop",
       "test_cases": [
         {
-          "id": "multiplication_positive_integers",
-          "name": "Multiply two positive integers",
-          "description": "Verify multiplication of two positive integers returns the correct product.",
+          "id": "addition_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Verify that the calculator correctly adds two positive integers when option 1 is selected.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 4 as the first number and 5 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 20."
+            "given": "User selects option 1, enters 5 as the first number and 7 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be 12."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_negative_and_positive",
-          "name": "Multiply a negative and a positive integer",
-          "description": "Verify multiplication of a negative and a positive integer returns the correct negative product.",
+          "id": "addition_negative_and_positive",
+          "name": "Addition of a negative and a positive integer",
+          "description": "Verify that the calculator correctly adds a negative and a positive integer.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters -3 as the first number and 7 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is -21."
+            "given": "User selects option 1, enters -3 as the first number and 8 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be 5."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_two_negatives",
-          "name": "Multiply two negative integers",
-          "description": "Verify multiplication of two negative integers returns a positive product.",
+          "id": "addition_two_negatives",
+          "name": "Addition of two negative integers",
+          "description": "Verify that the calculator correctly adds two negative integers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters -2 as the first number and -8 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 16."
+            "given": "User selects option 1, enters -4 as the first number and -6 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be -10."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_with_zero",
-          "name": "Multiply by zero",
-          "description": "Verify multiplication by zero returns zero.",
+          "id": "addition_zero",
+          "name": "Addition with zero",
+          "description": "Verify that the calculator correctly adds zero to another number.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 0 as the first number and 123 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 0."
+            "given": "User selects option 1, enters 0 as the first number and 9 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be 9."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_large_numbers",
-          "name": "Multiply large numbers",
-          "description": "Verify multiplication of large numbers returns the correct product without overflow.",
+          "id": "addition_large_numbers",
+          "name": "Addition of large numbers",
+          "description": "Verify that the calculator correctly adds two large numbers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 1000000 as the first number and 2000000 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 2000000000000."
+            "given": "User selects option 1, enters 1000000 as the first number and 2000000 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be 3000000."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_floats",
-          "name": "Multiply floating point numbers",
-          "description": "Verify multiplication of floating point numbers returns the correct product.",
+          "id": "addition_floats",
+          "name": "Addition of floating point numbers",
+          "description": "Verify that the calculator correctly adds two floating point numbers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 2.5 as the first number and 4.2 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 10.5."
+            "given": "User selects option 1, enters 2.5 as the first number and 3.7 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be 6.2."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_invalid_first_input",
-          "name": "Invalid first number input",
-          "description": "Verify the calculator handles non-numeric first input gracefully.",
+          "id": "addition_boundary_max_float",
+          "name": "Addition with maximum float values",
+          "description": "Verify that the calculator handles addition of maximum float values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 1.79e308 as the first number and 1.0 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The output should be inf or an overflow error, depending on implementation."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_invalid_input_non_numeric",
+          "name": "Addition with non-numeric input",
+          "description": "Verify that the calculator handles non-numeric input gracefully.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects option 3, enters 'abc' as the first number and 5 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "An error message is displayed and the user is prompted again."
+            "given": "User selects option 1, enters 'abc' as the first number and 5 as the second number.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message should be displayed indicating invalid input."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_invalid_second_input",
-          "name": "Invalid second number input",
-          "description": "Verify the calculator handles non-numeric second input gracefully.",
+          "id": "addition_missing_input",
+          "name": "Addition with missing input",
+          "description": "Verify that the calculator handles missing input values.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects option 3, enters 5 as the first number and 'xyz' as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "An error message is displayed and the user is prompted again."
+            "given": "User selects option 1, enters only one number and leaves the second input blank.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message should be displayed indicating missing input."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_menu_invalid_choice",
-          "name": "Invalid menu choice",
-          "description": "Verify the calculator handles invalid menu choices gracefully.",
+          "id": "addition_menu_invalid_option",
+          "name": "Invalid menu option",
+          "description": "Verify that the calculator handles invalid menu options.",
           "type": "negative",
           "test_setup": {
-            "given": "User enters 9 as the menu choice.",
-            "when": "The calculator loop processes the menu selection.",
-            "then": "An error message is displayed and the menu is shown again."
+            "given": "User enters 9 as the menu option.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message should be displayed indicating invalid option."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_exit_flow",
-          "name": "Exit after multiplication",
-          "description": "Verify the calculator exits correctly after performing multiplication and then selecting exit.",
+          "id": "addition_exit",
+          "name": "Exit option",
+          "description": "Verify that the calculator exits when option 5 is selected.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 2 and 3, then selects option 5.",
-            "when": "The calculator loop processes the multiplication and then exit option.",
-            "then": "The output is 6, followed by an exit message and the program terminates."
+            "given": "User selects option 5.",
+            "when": "The main calculator loop processes the input.",
+            "then": "The program should terminate the loop and exit."
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_minimum_integer",
-          "name": "Multiply with minimum integer value",
-          "description": "Verify multiplication with the minimum integer value supported by the system.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 3, enters -2147483648 as the first number and 1 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is -2147483648."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "multiplication_maximum_integer",
-          "name": "Multiply with maximum integer value",
-          "description": "Verify multiplication with the maximum integer value supported by the system.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 3, enters 2147483647 as the first number and 1 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "The output is 2147483647."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "multiplication_blank_input",
-          "name": "Blank input for numbers",
-          "description": "Verify the calculator handles blank input for numbers gracefully.",
+          "id": "addition_blank_input",
+          "name": "Blank input for menu option",
+          "description": "Verify that the calculator handles blank input for menu option.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects option 3, enters '' (blank) as the first number and 5 as the second number.",
-            "when": "The calculator loop processes the multiplication option.",
-            "then": "An error message is displayed and the user is prompted again."
+            "given": "User presses Enter without entering any menu option.",
+            "when": "The main calculator loop processes the input.",
+            "then": "An error message should be displayed indicating invalid input."
           },
           "implementation_id": "cal_py_main_loop"
         }
