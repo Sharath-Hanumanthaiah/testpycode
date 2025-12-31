@@ -1,8 +1,1 @@
-# Security Requirement: Secure Logging and Data Protection
-
-Logging must be implemented securely to prevent leakage of sensitive information.
-
-## Requirements
-- Do not log sensitive user data or personally identifiable information (PII).
-- Encrypt logs at rest if they may contain sensitive information.
-- Restrict access to logs to authorized personnel only.
+Addition: ... show the error if any of the input is having the error. All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content. Subtraction: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content. Multiplication: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content. Division: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content.
