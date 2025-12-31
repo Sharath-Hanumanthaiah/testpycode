@@ -804,6 +804,304 @@
           "implementation_id": "calculator_addition_operation"
         }
       ]
+    },
+    {
+      "implementation_id": "calculation_addition_block_cal.py",
+      "test_cases": [
+        {
+          "id": "addition_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Verify that the addition block correctly adds two positive integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 7, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Output is 12"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_negative_integers",
+          "name": "Addition of two negative integers",
+          "description": "Verify that the addition block correctly adds two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -3, num2 = -8, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Output is -11"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_zero_and_integer",
+          "name": "Addition of zero and an integer",
+          "description": "Verify that the addition block correctly adds zero and an integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0, num2 = 10, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Output is 10"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_large_numbers",
+          "name": "Addition of large integers",
+          "description": "Verify that the addition block correctly adds two large integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 2147483647, num2 = 1, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Output is 2147483648"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_float_input",
+          "name": "Addition with float input",
+          "description": "Verify that the addition block shows an error if a float is entered instead of an integer.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 5.5, num2 = 2, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Error message is shown indicating invalid input"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_non_numeric_input",
+          "name": "Addition with non-numeric input",
+          "description": "Verify that the addition block shows an error if a non-numeric value is entered.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'abc', num2 = 3, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Error message is shown indicating invalid input"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_missing_input",
+          "name": "Addition with missing input",
+          "description": "Verify that the addition block shows an error if one of the inputs is missing.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = '', num2 = 4, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Error message is shown indicating missing input"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_choice_not_one",
+          "name": "Choice is not Addition",
+          "description": "Verify that the addition block does not execute when the choice is not 1.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 2, num2 = 3, choice = 2",
+            "when": "Addition block is executed",
+            "then": "No addition output is shown"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_boundary_min_int",
+          "name": "Addition with minimum integer value",
+          "description": "Verify that the addition block correctly adds the minimum integer value.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -2147483648, num2 = 1, choice = 1",
+            "when": "Addition block is executed",
+            "then": "Output is -2147483647"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        },
+        {
+          "id": "addition_both_inputs_invalid",
+          "name": "Addition with both inputs invalid",
+          "description": "Verify that the addition block shows an error if both inputs are invalid.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'foo', num2 = 'bar', choice = 1",
+            "when": "Addition block is executed",
+            "then": "Error message is shown indicating invalid input"
+          },
+          "implementation_id": "calculation_addition_block_cal.py"
+        }
+      ]
+    },
+    {
+      "implementation_id": "main_loop_subtraction",
+      "test_cases": [
+        {
+          "id": "subtraction_positive_integers",
+          "name": "Subtract two positive integers",
+          "description": "Verify subtraction of two positive integers returns the correct result.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=10 and num2=3",
+            "when": "Subtraction branch is executed",
+            "then": "The result 7 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_negative_result",
+          "name": "Subtract larger number from smaller",
+          "description": "Verify subtraction where the second number is larger than the first, resulting in a negative value.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=3 and num2=10",
+            "when": "Subtraction branch is executed",
+            "then": "The result -7 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_with_zero",
+          "name": "Subtract zero from a number",
+          "description": "Verify subtraction when the second number is zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=5 and num2=0",
+            "when": "Subtraction branch is executed",
+            "then": "The result 5 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_zero_minus_number",
+          "name": "Subtract a number from zero",
+          "description": "Verify subtraction when the first number is zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=0 and num2=5",
+            "when": "Subtraction branch is executed",
+            "then": "The result -5 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_negative_numbers",
+          "name": "Subtract two negative numbers",
+          "description": "Verify subtraction of two negative numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=-4 and num2=-7",
+            "when": "Subtraction branch is executed",
+            "then": "The result 3 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_float_numbers",
+          "name": "Subtract two floating point numbers",
+          "description": "Verify subtraction of two floating point numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=5.5 and num2=2.2",
+            "when": "Subtraction branch is executed",
+            "then": "The result 3.3 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_large_numbers",
+          "name": "Subtract large numbers",
+          "description": "Verify subtraction with large integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=1000000000 and num2=999999999",
+            "when": "Subtraction branch is executed",
+            "then": "The result 1 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_invalid_choice",
+          "name": "Invalid menu choice does not perform subtraction",
+          "description": "Verify that selecting a menu option other than 2 does not perform subtraction.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters num1=5 and num2=3",
+            "when": "Main loop is executed",
+            "then": "Subtraction is not performed and result is not printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_non_numeric_input_num1",
+          "name": "Non-numeric input for first number",
+          "description": "Verify error handling when the first number is not numeric.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 2, enters num1='abc' and num2=5",
+            "when": "Subtraction branch is executed",
+            "then": "An error message is displayed indicating invalid input"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_non_numeric_input_num2",
+          "name": "Non-numeric input for second number",
+          "description": "Verify error handling when the second number is not numeric.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=5 and num2='xyz'",
+            "when": "Subtraction branch is executed",
+            "then": "An error message is displayed indicating invalid input"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_blank_input",
+          "name": "Blank input for numbers",
+          "description": "Verify error handling when input for numbers is blank.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 2, enters blank for num1 or num2",
+            "when": "Subtraction branch is executed",
+            "then": "An error message is displayed indicating invalid input"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_menu_input_non_numeric",
+          "name": "Non-numeric menu choice",
+          "description": "Verify error handling when the menu choice is not numeric.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 'two' as menu choice",
+            "when": "Main loop is executed",
+            "then": "An error message is displayed indicating invalid menu choice"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_minimum_integer_values",
+          "name": "Subtract minimum integer values",
+          "description": "Verify subtraction with minimum integer values (boundary condition).",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=-2147483648 and num2=-1",
+            "when": "Subtraction branch is executed",
+            "then": "The result -2147483647 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        },
+        {
+          "id": "subtraction_maximum_integer_values",
+          "name": "Subtract maximum integer values",
+          "description": "Verify subtraction with maximum integer values (boundary condition).",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, enters num1=2147483647 and num2=1",
+            "when": "Subtraction branch is executed",
+            "then": "The result 2147483646 is printed"
+          },
+          "implementation_id": "main_loop_subtraction"
+        }
+      ]
     }
   ],
   "component": [],
