@@ -1,9 +1,19 @@
 {
   "addition": {
-    "implementation": [],
+    "implementation": [
+      {
+        "id": "main_calculator_loop",
+        "name": "main calculator loop",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "This is the main loop that handles user input for addition and other operations. It reads user input, performs addition if selected, and prints the result.",
+        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice is 1:\n        PRINT sum of numbers\n    ELSE IF choice is 2:\n        PRINT difference\n    ELSE IF choice is 3:\n        PRINT product\n    ELSE IF choice is 4:\n        PRINT division\n    ELSE IF choice is 5:\n        PRINT exit message\n        BREAK loop\n    PRINT newline"
+      }
+    ],
     "missing_implementations": [
       "All error messages should be generic and user-friendly.",
       "Internal error details must not be exposed to users.",
+      "Detailed errors should be logged securely for debugging.",
       "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
     ]
   },
@@ -59,6 +69,14 @@
       "Internal error details must not be exposed to users.",
       "Detailed errors should be logged securely for debugging.",
       "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+    ]
+  },
+  "authentication_and_access_control": {
+    "implementation": [],
+    "missing_implementations": [
+      "Require user authentication before allowing access to calculator operations if the service is accessible over a network or as an API.",
+      "Implement role-based access control if certain operations should be restricted to specific user groups.",
+      "Deny access by default and explicitly allow only authorized users."
     ]
   }
 }
