@@ -2,55 +2,53 @@
   "addition": {
     "implementation": [
       {
-        "id": "cal_py_main_loop",
-        "name": "main calculator loop",
+        "id": "calculation_addition_block_cal.py",
+        "name": "Addition block in main loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the addition operation as part of a calculator app. Handles user input for two numbers and performs addition if the user selects option 1.",
-        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice\n    GET first number\n    GET second number\n    IF choice is 1:\n        PRINT Output: num1 + num2\n    ELSE IF choice is 2:\n        PRINT Output: num1 - num2\n    ELSE IF choice is 3:\n        PRINT Output: num1 * num2\n    ELSE IF choice is 4:\n        PRINT Output: num1 / num2\n    ELSE IF choice is 5:\n        PRINT Exiting...\n        BREAK\n    PRINT newline"
+        "How_is_it_connected_to_implementation": "Handles the addition operation when the user selects 'Addition'. It reads two inputs, converts them to integers, and prints the sum.",
+        "pseudo_code": "LOOP forever:\n    Show menu\n    Get user choice\n    Get num1 from input\n    Get num2 from input\n    IF choice == 1 (Addition):\n        Print num1 + num2"
       }
     ],
     "missing_implementations": [
-      "Show the error if any of the input is having the error"
+      "All error messages should be generic and user-friendly.",
+      "Show the error if any of the input is having the error during addition.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors should be logged securely for debugging."
     ]
   },
   "subtraction": {
-    "implementation": [],
+    "implementation": [
+      {
+        "id": "main_loop_subtraction",
+        "name": "main calculator loop (subtraction branch)",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "Implements the subtraction operation as part of the main calculator loop. When the user selects option 2, it performs subtraction and prints the result.",
+        "pseudo_code": "LOOP forever:\n    Display menu options\n    Get user choice\n    Get first number\n    Get second number\n    IF choice is 2 (Subtraction):\n        Print the result of num1 - num2"
+      }
+    ],
     "missing_implementations": [
-      "Given two numbers, the greater number should be subtracted by the smaller one.",
-      "Output can be negative or positive.",
-      "Input numbers can be negative or positive."
+      "All error messages should be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors should be logged securely for debugging."
     ]
   },
   "multiplication": {
-    "implementation": [
-      {
-        "id": "cal_py_main_loop",
-        "name": "main calculator loop",
-        "file_path": "cal.py",
-        "type": "function",
-        "How_is_it_connected_to_implementation": "Implements a menu-driven calculator. When the user selects option 3 (Multiplication), it multiplies two input numbers and prints the output.",
-        "pseudo_code": "Print welcome message\nLoop forever:\n    Print menu options\n    Get user choice\n    Get first number\n    Get second number\n    IF choice == 1:\n        Print sum\n    ELSE IF choice == 2:\n        Print difference\n    ELSE IF choice == 3:\n        Print product (num1 * num2)\n    ELSE IF choice == 4:\n        Print division\n    ELSE IF choice == 5:\n        Print exit message\n        Break loop\n    Print newline"
-      }
-    ],
+    "implementation": [],
     "missing_implementations": [
-      "Output should not be decimal"
+      "Perform multiplication and handle errors as specified.",
+      "All error messages should be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors should be logged securely for debugging."
     ]
   },
   "division": {
-    "implementation": [
-      {
-        "id": "calculator_division_branch_cal.py",
-        "name": "Division branch in calculator main loop",
-        "file_path": "cal.py",
-        "type": "function",
-        "How_is_it_connected_to_implementation": "Implements division operation when user selects option 4. Directly performs division using num1 / num2 and prints the result.",
-        "pseudo_code": "IF user selects option 4 (Division):\n    Prompt for first number (num1)\n    Prompt for second number (num2)\n    Output: num1 / num2"
-      }
-    ],
+    "implementation": [],
     "missing_implementations": [
-      "Should not be divided by zero.",
-      "Always handle the exception of dividing by zero."
+      "All error messages should be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors should be logged securely for debugging."
     ]
   }
 }
