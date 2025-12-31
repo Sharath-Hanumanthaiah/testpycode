@@ -1,8 +1,9 @@
-# Security Requirement: Authentication and Authorization
+# Security Requirement: API Security Best Practices
 
-All endpoints and operations must enforce authentication and authorization to prevent unauthorized access.
+All API endpoints must be protected against common web vulnerabilities.
 
 ## Requirements
-- Require user authentication before allowing access to arithmetic operations.
-- Implement role-based access control (RBAC) if different user roles are supported.
-- Securely manage sessions and tokens to prevent session hijacking.
+- Use parameterized queries and avoid dynamic code execution.
+- Implement CSRF protection for web interfaces.
+- Sanitize all output to prevent XSS attacks.
+- Enforce rate limiting to prevent abuse and denial of service.
