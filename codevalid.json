@@ -6,7 +6,8 @@
       "description": "Given numbers should be added and the output shared.",
       "conditions": [
         "Input numbers can be negative.",
-        "Output can be negative or positive."
+        "Output can be negative or positive.",
+        "Show the error if any of the input is having the error."
       ],
       "change_status": "updated"
     },
@@ -43,6 +44,6 @@
       "change_status": ""
     }
   ],
-  "last_updated": "2025-12-31T16:15:40.062887",
+  "last_updated": "2025-12-31T16:20:38.287730",
   "version": "1.0"
 }
