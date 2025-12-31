@@ -3,52 +3,48 @@
     {
       "id": "addition",
       "header": "Addition",
-      "description": "Given numbers should be added and the output shared.",
+      "description": "Show the error if any of the input is having the error during addition.",
       "conditions": [
-        "Input numbers can be negative.",
-        "Output can be negative or positive.",
-        "Show the error if any of the input is having the error.",
-        "All inputs must be strictly validated and sanitized to accept only numeric values.",
-        "Reject non-numeric or malformed input and return a generic error message."
+        "All error messages should be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors should be logged securely for debugging."
       ],
       "change_status": "updated"
     },
     {
       "id": "subtraction",
       "header": "Subtraction",
-      "description": "Given two numbers, the greater number should be subtracted by the smaller one.",
+      "description": "Perform subtraction and handle errors as specified.",
       "conditions": [
-        "Output can be negative or positive.",
-        "Input numbers can be negative or positive.",
-        "All inputs must be strictly validated and sanitized to accept only numeric values."
+        "All error messages should be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors should be logged securely for debugging."
       ],
       "change_status": "updated"
     },
     {
       "id": "multiplication",
       "header": "Multiplication",
-      "description": "Given two numbers, multiply the numbers and share the output.",
+      "description": "Perform multiplication and handle errors as specified.",
       "conditions": [
-        "Output can be negative or positive.",
-        "Input numbers can be negative or positive.",
-        "Output should not be decimal.",
-        "All inputs must be strictly validated and sanitized to accept only numeric values."
+        "All error messages should be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors should be logged securely for debugging."
       ],
       "change_status": "updated"
     },
     {
       "id": "division",
       "header": "Division",
-      "description": "Given two numbers, divide the numbers and get the output.",
+      "description": "Perform division and handle errors as specified.",
       "conditions": [
-        "Should not be divided by zero.",
-        "Always handle the exception of dividing by zero.",
-        "Input numbers can be negative or positive.",
-        "All inputs must be strictly validated and sanitized to accept only numeric values."
+        "All error messages should be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors should be logged securely for debugging."
       ],
       "change_status": "updated"
     }
   ],
-  "last_updated": "2025-12-31T19:28:20.340216",
+  "last_updated": "2025-12-31T19:29:20.598582",
   "version": "1.0"
 }
