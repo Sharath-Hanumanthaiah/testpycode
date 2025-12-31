@@ -2,15 +2,17 @@
   "addition": {
     "implementation": [
       {
-        "id": "cal_py_addition_branch",
-        "name": "Addition branch in main loop",
+        "id": "cal_py_main_loop",
+        "name": "main calculator loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the addition operation when the user selects option 1. It reads two numbers (which can be negative), adds them, and prints the result.",
-        "pseudo_code": "LOOP forever:\n    Display calculator menu\n    Get user choice as integer\n    Get first number as integer input\n    Get second number as integer input\n    IF choice == 1:\n        Output the sum of first and second number\n    ELSE IF choice == 2:\n        Output the difference\n    ELSE IF choice == 3:\n        Output the product\n    ELSE IF choice == 4:\n        Output the quotient\n    ELSE IF choice == 5:\n        Exit loop\n    Print a blank line"
+        "How_is_it_connected_to_implementation": "Implements the addition operation when the user selects option 1. It reads two numbers, adds them, and prints the result.",
+        "pseudo_code": "LOOP forever:\n    Display menu options\n    Get user choice\n    Get first number\n    Get second number\n    IF choice is 1 (Addition):\n        Print the sum of the two numbers\n    ELSE IF choice is 2 (Subtraction):\n        Print the difference\n    ELSE IF choice is 3 (Multiplication):\n        Print the product\n    ELSE IF choice is 4 (Division):\n        Print the quotient\n    ELSE IF choice is 5 (Exit):\n        Exit the loop\n    Print a blank line"
       }
     ],
-    "missing_implementations": []
+    "missing_implementations": [
+      "Show an error if any of the input is having the error"
+    ]
   },
   "subtraction": {
     "implementation": [],
