@@ -1,4 +1,8 @@
-Addition: ... show the error if any of the input is having the error. All error messages should be generic and user-friendly. Internal error details must not be exposed to users. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content.
-Subtraction: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content.
-Multiplication: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content.
-Division: ... All error messages should be generic and user-friendly. Internal error details must not be exposed to users. Detailed errors should be logged securely for debugging. All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content.
+# Security Requirement: Authentication and Authorization
+
+All endpoints and operations must enforce authentication and authorization to prevent unauthorized access.
+
+## Requirements
+- Require user authentication before allowing access to arithmetic operations.
+- Implement role-based access control (RBAC) if different user roles are supported.
+- Securely manage sessions and tokens to prevent session hijacking.
