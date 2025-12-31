@@ -1,10 +1,17 @@
 {
   "addition": {
-    "implementation": [],
+    "implementation": [
+      {
+        "id": "cal_py_main_loop",
+        "name": "main_calculator_loop",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "Implements the main calculator logic, including addition when the user selects option 1. Handles user input for numbers and operation selection.",
+        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice == 1:\n        PRINT Output: num1 + num2\n    ELSE IF choice == 2:\n        PRINT Output: num1 - num2\n    ELSE IF choice == 3:\n        PRINT Output: num1 * num2\n    ELSE IF choice == 4:\n        PRINT Output: num1 / num2\n    ELSE IF choice == 5:\n        PRINT Exiting...\n        BREAK loop\n    PRINT newline"
+      }
+    ],
     "missing_implementations": [
-      "Given numbers should be added and the output shared.",
-      "Input numbers can be negative.",
-      "Output can be negative or positive."
+      "Show the error if any of the input is having the error"
     ]
   },
   "subtraction": {
