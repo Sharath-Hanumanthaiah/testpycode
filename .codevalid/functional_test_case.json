@@ -183,20 +183,32 @@
           "type": "positive",
           "test_setup": {
             "given": "User selects option 1, enters 5 as the first number and 7 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 12'"
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 12'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "addition_negative_integers",
-          "name": "Addition of two negative integers",
-          "description": "Verify that the calculator correctly adds two negative integers when option 1 is selected.",
+          "id": "addition_negative_and_positive",
+          "name": "Addition of a negative and a positive integer",
+          "description": "Verify that the calculator correctly adds a negative and a positive integer.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 1, enters -3 as the first number and -8 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: -11'"
+            "given": "User selects option 1, enters -3 as the first number and 8 as the second number.",
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 5'"
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_two_negatives",
+          "name": "Addition of two negative integers",
+          "description": "Verify that the calculator correctly adds two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters -4 as the first number and -6 as the second number.",
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: -10'"
           },
           "implementation_id": "cal_py_main_loop"
         },
@@ -207,140 +219,116 @@
           "type": "positive",
           "test_setup": {
             "given": "User selects option 1, enters 0 as the first number and 9 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 9'"
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 9'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
           "id": "addition_large_numbers",
           "name": "Addition of large numbers",
-          "description": "Verify that the calculator correctly adds two large integers.",
+          "description": "Verify that the calculator correctly adds two large numbers.",
           "type": "positive",
           "test_setup": {
             "given": "User selects option 1, enters 1000000 as the first number and 2000000 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 3000000'"
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 3000000'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_path",
-          "name": "Subtraction operation",
-          "description": "Verify that the calculator correctly subtracts two numbers when option 2 is selected.",
+          "id": "addition_floats",
+          "name": "Addition of floating point numbers",
+          "description": "Verify that the calculator correctly adds two floating point numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 1, enters 2.5 as the first number and 3.7 as the second number.",
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 6.2'"
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_invalid_choice",
+          "name": "Invalid menu choice",
+          "description": "Verify that the calculator handles an invalid menu choice gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 9 as the menu choice.",
+            "when": "The main calculator loop is executed.",
+            "then": "The calculator should not perform any operation and should prompt the menu again."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_non_numeric_input",
+          "name": "Non-numeric input for numbers",
+          "description": "Verify that the calculator handles non-numeric input for numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, enters 'abc' as the first number.",
+            "when": "The main calculator loop is executed.",
+            "then": "The calculator should display an error message or prompt the user to enter a valid number."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_exit",
+          "name": "Exit option",
+          "description": "Verify that the calculator exits when option 5 is selected.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 5.",
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Exiting...' and the loop should terminate."
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "addition_subtraction_path",
+          "name": "Subtraction operation path",
+          "description": "Verify that the calculator performs subtraction when option 2 is selected.",
           "type": "positive",
           "test_setup": {
             "given": "User selects option 2, enters 10 as the first number and 4 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 6'"
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 6'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "multiplication_path",
-          "name": "Multiplication operation",
-          "description": "Verify that the calculator correctly multiplies two numbers when option 3 is selected.",
+          "id": "addition_multiplication_path",
+          "name": "Multiplication operation path",
+          "description": "Verify that the calculator performs multiplication when option 3 is selected.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 6 as the first number and 7 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 42'"
+            "given": "User selects option 3, enters 3 as the first number and 7 as the second number.",
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 21'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "division_path",
-          "name": "Division operation",
-          "description": "Verify that the calculator correctly divides two numbers when option 4 is selected.",
+          "id": "addition_division_path",
+          "name": "Division operation path",
+          "description": "Verify that the calculator performs division when option 4 is selected.",
           "type": "positive",
           "test_setup": {
             "given": "User selects option 4, enters 20 as the first number and 5 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 4.0'"
+            "when": "The main calculator loop is executed.",
+            "then": "The output should be 'Output: 4.0'"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "division_by_zero",
+          "id": "addition_division_by_zero",
           "name": "Division by zero",
           "description": "Verify that the calculator handles division by zero gracefully.",
           "type": "negative",
           "test_setup": {
             "given": "User selects option 4, enters 10 as the first number and 0 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Should handle ZeroDivisionError and print an appropriate error message (e.g., 'Error: Division by zero is not allowed.')"
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "exit_path",
-          "name": "Exit operation",
-          "description": "Verify that the calculator exits when option 5 is selected.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 5.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Exiting...' and the loop should terminate."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "invalid_menu_option",
-          "name": "Invalid menu option",
-          "description": "Verify that the calculator handles invalid menu options gracefully.",
-          "type": "negative",
-          "test_setup": {
-            "given": "User enters 9 as the menu option.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Should print an error message indicating invalid option and prompt again."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "non_integer_menu_input",
-          "name": "Non-integer menu input",
-          "description": "Verify that the calculator handles non-integer input for menu selection.",
-          "type": "negative",
-          "test_setup": {
-            "given": "User enters 'a' as the menu option.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Should print an error message indicating invalid input and prompt again."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "non_integer_number_input",
-          "name": "Non-integer number input",
-          "description": "Verify that the calculator handles non-integer input for numbers.",
-          "type": "negative",
-          "test_setup": {
-            "given": "User selects option 1, enters 'x' as the first number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Should print an error message indicating invalid input and prompt again."
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "addition_negative_and_positive",
-          "name": "Addition of negative and positive integer",
-          "description": "Verify that the calculator correctly adds a negative and a positive integer.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 1, enters -5 as the first number and 10 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: 5'"
-          },
-          "implementation_id": "cal_py_main_loop"
-        },
-        {
-          "id": "addition_min_max_int",
-          "name": "Addition of minimum and maximum integer values",
-          "description": "Verify that the calculator correctly adds the minimum and maximum integer values supported by Python.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 1, enters -2147483648 as the first number and 2147483647 as the second number.",
-            "when": "main_calculator_loop is called and user inputs are provided.",
-            "then": "Output should be 'Output: -1'"
+            "when": "The main calculator loop is executed.",
+            "then": "The calculator should display an error message or handle the division by zero without crashing."
           },
           "implementation_id": "cal_py_main_loop"
         }
