@@ -1102,6 +1102,304 @@
           "implementation_id": "main_loop_subtraction"
         }
       ]
+    },
+    {
+      "implementation_id": "calculator_app_main_loop",
+      "test_cases": [
+        {
+          "id": "subtraction_positive_basic",
+          "name": "test_subtraction_basic_positive_numbers",
+          "description": "Subtracts a smaller positive integer from a larger positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 10, num2 = 5",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 5"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_negative_numbers",
+          "name": "test_subtraction_with_negative_numbers",
+          "description": "Subtracts a negative integer from a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 7, num2 = -3",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 10"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_result_negative",
+          "name": "test_subtraction_result_negative",
+          "description": "Subtracts a larger number from a smaller number, resulting in a negative output.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 3, num2 = 8",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is -5"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_zero",
+          "name": "test_subtraction_with_zero",
+          "description": "Subtracts zero from a number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 15, num2 = 0",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 15"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_both_zero",
+          "name": "test_subtraction_both_zero",
+          "description": "Subtracts zero from zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 0, num2 = 0",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 0"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_large_numbers",
+          "name": "test_subtraction_large_numbers",
+          "description": "Subtracts two large integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 1000000, num2 = 999999",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 1"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_negative_non_integer_input",
+          "name": "test_subtraction_non_integer_input",
+          "description": "Handles non-integer input for num1 or num2.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 'abc', num2 = 5",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The program raises a ValueError or displays an error message"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_negative_invalid_menu_choice",
+          "name": "test_invalid_menu_choice",
+          "description": "Handles an invalid menu option.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 9 (not in 1-5), num1 = 2, num2 = 3",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The program does not perform any operation and may prompt again"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_subtract_negative_from_negative",
+          "name": "test_subtraction_negative_from_negative",
+          "description": "Subtracts a negative number from another negative number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = -4, num2 = -7",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 3"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_subtract_same_number",
+          "name": "test_subtraction_same_number",
+          "description": "Subtracts a number from itself.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 2, num1 = 42, num2 = 42",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The output is 0"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_negative_empty_input",
+          "name": "test_subtraction_empty_input",
+          "description": "Handles empty input for num1 or num2.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 2, num1 = '', num2 = 5",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The program raises a ValueError or displays an error message"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_positive_exit",
+          "name": "test_exit_option",
+          "description": "User selects the exit option to terminate the loop.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 5",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The program prints 'Exiting...' and terminates the loop"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        },
+        {
+          "id": "subtraction_negative_division_by_zero",
+          "name": "test_division_by_zero",
+          "description": "Handles division by zero when user selects division option.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 4, num1 = 10, num2 = 0",
+            "when": "main_loop is called and user inputs are provided",
+            "then": "The program raises a ZeroDivisionError or displays an error message"
+          },
+          "implementation_id": "calculator_app_main_loop"
+        }
+      ]
+    },
+    {
+      "implementation_id": "main_calculator_loop",
+      "test_cases": [
+        {
+          "id": "division_positive_normal",
+          "name": "test_division_normal",
+          "description": "Divides two positive integers and returns the correct quotient.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 10 and 2.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is 5.0."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_negative_dividend",
+          "name": "test_division_negative_dividend",
+          "description": "Divides a negative number by a positive number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters -10 and 2.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is -5.0."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_negative_divisor",
+          "name": "test_division_negative_divisor",
+          "description": "Divides a positive number by a negative number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 10 and -2.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is -5.0."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_both_negative",
+          "name": "test_division_both_negative",
+          "description": "Divides two negative numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters -10 and -2.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is 5.0."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_zero_dividend",
+          "name": "test_division_zero_dividend",
+          "description": "Divides zero by a non-zero number.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 0 and 5.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is 0.0."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_negative_zero_divisor",
+          "name": "test_division_zero_divisor",
+          "description": "Attempts to divide a number by zero, which should be handled as an error.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 10 and 0.",
+            "when": "Function is called and division is attempted.",
+            "then": "Error message is displayed or exception is handled for division by zero."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_float_result",
+          "name": "test_division_float_result",
+          "description": "Divides two numbers resulting in a floating-point quotient.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 7 and 2.",
+            "when": "Function is called and division is performed.",
+            "then": "Output is 3.5."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_negative_non_integer_input",
+          "name": "test_division_non_integer_input",
+          "description": "Handles non-integer input for numbers, which should be rejected or cause an error.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 'a' and 2.",
+            "when": "Function is called and input is processed.",
+            "then": "Error message is displayed or input is rejected."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_negative_non_integer_choice",
+          "name": "test_division_non_integer_choice",
+          "description": "Handles non-integer input for operation choice, which should be rejected or cause an error.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 'x' as the menu choice.",
+            "when": "Function is called and input is processed.",
+            "then": "Error message is displayed or input is rejected."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_negative_invalid_choice",
+          "name": "test_invalid_menu_choice",
+          "description": "Handles an invalid menu choice outside the defined options.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User enters 9 as the menu choice.",
+            "when": "Function is called and input is processed.",
+            "then": "Error message is displayed or input is rejected."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_positive_exit",
+          "name": "test_exit_menu_choice",
+          "description": "User selects the exit option and the loop terminates.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects menu choice 5.",
+            "when": "Function is called and input is processed.",
+            "then": "Exit message is displayed and loop breaks."
+          },
+          "implementation_id": "main_calculator_loop"
+        }
+      ]
     }
   ],
   "component": [],
