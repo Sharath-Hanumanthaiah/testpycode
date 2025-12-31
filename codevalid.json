@@ -7,7 +7,9 @@
       "conditions": [
         "Input numbers can be negative.",
         "Output can be negative or positive.",
-        "Show the error if any of the input is having the error."
+        "Show the error if any of the input is having the error.",
+        "All inputs must be strictly validated and sanitized to accept only numeric values.",
+        "Reject non-numeric or malformed input and return a generic error message."
       ],
       "change_status": "updated"
     },
@@ -17,9 +19,10 @@
       "description": "Given two numbers, the greater number should be subtracted by the smaller one.",
       "conditions": [
         "Output can be negative or positive.",
-        "Input numbers can be negative or positive."
+        "Input numbers can be negative or positive.",
+        "All inputs must be strictly validated and sanitized to accept only numeric values."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "multiplication",
@@ -28,9 +31,10 @@
       "conditions": [
         "Output can be negative or positive.",
         "Input numbers can be negative or positive.",
-        "Output should not be decimal."
+        "Output should not be decimal.",
+        "All inputs must be strictly validated and sanitized to accept only numeric values."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "division",
@@ -39,11 +43,12 @@
       "conditions": [
         "Should not be divided by zero.",
         "Always handle the exception of dividing by zero.",
-        "Input numbers can be negative or positive."
+        "Input numbers can be negative or positive.",
+        "All inputs must be strictly validated and sanitized to accept only numeric values."
       ],
-      "change_status": ""
+      "change_status": "updated"
     }
   ],
-  "last_updated": "2025-12-31T19:27:05.400285",
+  "last_updated": "2025-12-31T19:28:20.340216",
   "version": "1.0"
 }
