@@ -1,41 +1,55 @@
 {
   "breakdowns": [
     {
-      "id": "api_web_vulnerability_protection",
-      "header": "API Web Vulnerability Protection",
-      "description": "Protect all API endpoints against common web vulnerabilities.",
-      "conditions": [],
+      "id": "addition_operation",
+      "header": "Addition Operation",
+      "description": "Performs addition of user-provided inputs.",
+      "conditions": [
+        "Show the error if any of the input is having the error.",
+        "All error messages must be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors must be logged securely for debugging.",
+        "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+      ],
       "change_status": "new"
     },
     {
-      "id": "parameterized_queries",
-      "header": "Use of Parameterized Queries",
-      "description": "Ensure all queries are parameterized and avoid dynamic code execution.",
-      "conditions": [],
+      "id": "subtraction_operation",
+      "header": "Subtraction Operation",
+      "description": "Performs subtraction of user-provided inputs.",
+      "conditions": [
+        "All error messages must be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors must be logged securely for debugging.",
+        "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+      ],
       "change_status": "new"
     },
     {
-      "id": "csrf_protection",
-      "header": "CSRF Protection for Web Interfaces",
-      "description": "Implement CSRF protection mechanisms for all web interfaces.",
-      "conditions": [],
+      "id": "multiplication_operation",
+      "header": "Multiplication Operation",
+      "description": "Performs multiplication of user-provided inputs.",
+      "conditions": [
+        "All error messages must be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors must be logged securely for debugging.",
+        "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+      ],
       "change_status": "new"
     },
     {
-      "id": "output_sanitization",
-      "header": "Output Sanitization",
-      "description": "Sanitize all output to prevent XSS attacks.",
-      "conditions": [],
-      "change_status": "new"
-    },
-    {
-      "id": "rate_limiting",
-      "header": "Rate Limiting Enforcement",
-      "description": "Enforce rate limiting on API endpoints to prevent abuse and denial of service.",
-      "conditions": [],
+      "id": "division_operation",
+      "header": "Division Operation",
+      "description": "Performs division of user-provided inputs.",
+      "conditions": [
+        "All error messages must be generic and user-friendly.",
+        "Internal error details must not be exposed to users.",
+        "Detailed errors must be logged securely for debugging.",
+        "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+      ],
       "change_status": "new"
     }
   ],
-  "last_updated": "2025-12-31T20:24:57.840375",
+  "last_updated": "2025-12-31T20:26:27.344376",
   "version": "1.0"
 }
