@@ -1268,136 +1268,297 @@
       "implementation_id": "main_calculator_loop",
       "test_cases": [
         {
-          "id": "division_positive_normal",
-          "name": "test_division_normal",
-          "description": "Divides two positive integers and returns the correct quotient.",
+          "id": "multiplication_positive_basic",
+          "name": "test_multiplication_basic",
+          "description": "Verify multiplication of two positive integers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects division (choice 4), enters 10 and 2.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is 5.0."
+            "given": "User selects option 3, enters 4 and 5.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product 20 is displayed."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_positive_negative_dividend",
-          "name": "test_division_negative_dividend",
-          "description": "Divides a negative number by a positive number.",
+          "id": "multiplication_positive_zero",
+          "name": "test_multiplication_with_zero",
+          "description": "Verify multiplication when one operand is zero.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects division (choice 4), enters -10 and 2.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is -5.0."
+            "given": "User selects option 3, enters 0 and 7.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product 0 is displayed."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_positive_negative_divisor",
-          "name": "test_division_negative_divisor",
-          "description": "Divides a positive number by a negative number.",
+          "id": "multiplication_positive_negative",
+          "name": "test_multiplication_with_negative",
+          "description": "Verify multiplication of a positive and a negative integer.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects division (choice 4), enters 10 and -2.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is -5.0."
+            "given": "User selects option 3, enters -3 and 6.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product -18 is displayed."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_positive_both_negative",
-          "name": "test_division_both_negative",
-          "description": "Divides two negative numbers.",
+          "id": "multiplication_positive_both_negative",
+          "name": "test_multiplication_both_negative",
+          "description": "Verify multiplication of two negative integers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects division (choice 4), enters -10 and -2.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is 5.0."
+            "given": "User selects option 3, enters -2 and -8.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product 16 is displayed."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_positive_zero_dividend",
-          "name": "test_division_zero_dividend",
-          "description": "Divides zero by a non-zero number.",
+          "id": "multiplication_positive_large_numbers",
+          "name": "test_multiplication_large_numbers",
+          "description": "Verify multiplication with large integer values.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects division (choice 4), enters 0 and 5.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is 0.0."
+            "given": "User selects option 3, enters 100000 and 200000.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product 20000000000 is displayed."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_negative_zero_divisor",
-          "name": "test_division_zero_divisor",
-          "description": "Attempts to divide a number by zero, which should be handled as an error.",
+          "id": "multiplication_negative_non_integer_input_choice",
+          "name": "test_non_integer_choice_input",
+          "description": "Verify behavior when user enters a non-integer for the menu choice.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects division (choice 4), enters 10 and 0.",
-            "when": "Function is called and division is attempted.",
-            "then": "Error message is displayed or exception is handled for division by zero."
-          },
-          "implementation_id": "main_calculator_loop"
-        },
-        {
-          "id": "division_positive_float_result",
-          "name": "test_division_float_result",
-          "description": "Divides two numbers resulting in a floating-point quotient.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects division (choice 4), enters 7 and 2.",
-            "when": "Function is called and division is performed.",
-            "then": "Output is 3.5."
-          },
-          "implementation_id": "main_calculator_loop"
-        },
-        {
-          "id": "division_negative_non_integer_input",
-          "name": "test_division_non_integer_input",
-          "description": "Handles non-integer input for numbers, which should be rejected or cause an error.",
-          "type": "negative",
-          "test_setup": {
-            "given": "User selects division (choice 4), enters 'a' and 2.",
-            "when": "Function is called and input is processed.",
+            "given": "User enters 'abc' as menu choice.",
+            "when": "Function is called and user input is processed.",
             "then": "Error message is displayed or input is rejected."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_negative_non_integer_choice",
-          "name": "test_division_non_integer_choice",
-          "description": "Handles non-integer input for operation choice, which should be rejected or cause an error.",
+          "id": "multiplication_negative_non_integer_operand",
+          "name": "test_non_integer_operand_input",
+          "description": "Verify behavior when user enters a non-integer for one of the operands.",
           "type": "negative",
           "test_setup": {
-            "given": "User enters 'x' as the menu choice.",
-            "when": "Function is called and input is processed.",
+            "given": "User selects option 3, enters 'xyz' and 5.",
+            "when": "Function is called and user input is processed.",
             "then": "Error message is displayed or input is rejected."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_negative_invalid_choice",
-          "name": "test_invalid_menu_choice",
-          "description": "Handles an invalid menu choice outside the defined options.",
+          "id": "multiplication_negative_menu_out_of_range",
+          "name": "test_menu_choice_out_of_range",
+          "description": "Verify behavior when user enters a menu choice not in 1-5.",
           "type": "negative",
           "test_setup": {
-            "given": "User enters 9 as the menu choice.",
-            "when": "Function is called and input is processed.",
+            "given": "User enters 9 as menu choice.",
+            "when": "Function is called and user input is processed.",
             "then": "Error message is displayed or input is rejected."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "division_positive_exit",
-          "name": "test_exit_menu_choice",
-          "description": "User selects the exit option and the loop terminates.",
+          "id": "multiplication_positive_exit",
+          "name": "test_exit_option",
+          "description": "Verify that selecting exit option displays exit message and breaks the loop.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects menu choice 5.",
-            "when": "Function is called and input is processed.",
-            "then": "Exit message is displayed and loop breaks."
+            "given": "User selects option 5.",
+            "when": "Function is called and user input is processed.",
+            "then": "Exit message is displayed and loop terminates."
           },
           "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "multiplication_positive_menu_loop",
+          "name": "test_menu_loop_continues",
+          "description": "Verify that after a multiplication operation, the menu is displayed again.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters 2 and 3, then selects option 5.",
+            "when": "Function is called and user input is processed.",
+            "then": "Product 6 is displayed, menu is shown again, and then exit message is displayed."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "multiplication_negative_empty_input",
+          "name": "test_empty_input",
+          "description": "Verify behavior when user provides empty input for choice or operands.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User presses Enter without typing a value for choice or operands.",
+            "when": "Function is called and user input is processed.",
+            "then": "Error message is displayed or input is rejected."
+          },
+          "implementation_id": "main_calculator_loop"
+        }
+      ]
+    },
+    {
+      "implementation_id": "main_division_branch",
+      "test_cases": [
+        {
+          "id": "division_positive_integers",
+          "name": "Division of two positive integers",
+          "description": "Verify division works correctly for two positive integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 10, num2 = 2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 5.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_negative_by_positive",
+          "name": "Division of negative by positive integer",
+          "description": "Verify division works when the numerator is negative and denominator is positive.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -8, num2 = 2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is -4.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_positive_by_negative",
+          "name": "Division of positive by negative integer",
+          "description": "Verify division works when the numerator is positive and denominator is negative.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 8, num2 = -2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is -4.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_negative_by_negative",
+          "name": "Division of negative by negative integer",
+          "description": "Verify division works when both numerator and denominator are negative.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -8, num2 = -2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 4.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_zero_numerator",
+          "name": "Division with zero numerator",
+          "description": "Verify division works when numerator is zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0, num2 = 5, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 0.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_zero_denominator",
+          "name": "Division by zero",
+          "description": "Verify that dividing by zero is handled as an error.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 0, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Error message is displayed indicating division by zero is not allowed"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_float_result",
+          "name": "Division resulting in float",
+          "description": "Verify division returns a float when result is not an integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 7, num2 = 2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 3.5"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_large_numbers",
+          "name": "Division of large numbers",
+          "description": "Verify division works for large integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 1000000000, num2 = 2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 500000000.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_small_numbers",
+          "name": "Division of small numbers",
+          "description": "Verify division works for small (fractional) numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0.0004, num2 = 0.02, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 0.02"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_non_numeric_input_num1",
+          "name": "Non-numeric input for numerator",
+          "description": "Verify error handling when the numerator is not a number.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'abc', num2 = 2, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Error message is displayed indicating invalid input"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_non_numeric_input_num2",
+          "name": "Non-numeric input for denominator",
+          "description": "Verify error handling when the denominator is not a number.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 'xyz', user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Error message is displayed indicating invalid input"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_min_int_values",
+          "name": "Division with minimum integer values",
+          "description": "Verify division works with minimum integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -2147483648, num2 = 1, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is -2147483648.0"
+          },
+          "implementation_id": "main_division_branch"
+        },
+        {
+          "id": "division_max_int_values",
+          "name": "Division with maximum integer values",
+          "description": "Verify division works with maximum integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 2147483647, num2 = 1, user selects option 4",
+            "when": "Division branch is executed",
+            "then": "Output is 2147483647.0"
+          },
+          "implementation_id": "main_division_branch"
         }
       ]
     }
