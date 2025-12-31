@@ -2,17 +2,23 @@
   "addition": {
     "implementation": [
       {
-        "id": "cal_py_main_loop",
-        "name": "main_calculator_loop",
+        "id": "calculator_main_loop",
+        "name": "main calculator loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the main calculator logic, including addition when the user selects option 1. Handles user input for numbers and operation selection.",
-        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice == 1:\n        PRINT Output: num1 + num2\n    ELSE IF choice == 2:\n        PRINT Output: num1 - num2\n    ELSE IF choice == 3:\n        PRINT Output: num1 * num2\n    ELSE IF choice == 4:\n        PRINT Output: num1 / num2\n    ELSE IF choice == 5:\n        PRINT Exiting...\n        BREAK loop\n    PRINT newline"
+        "How_is_it_connected_to_implementation": "This is the main loop that presents the user with options, takes input for two numbers, and directs to the addition operation when the user selects it.",
+        "pseudo_code": "print welcome message\nwhile true:\n    print menu options\n    get user choice\n    get first number\n    get second number\n    if choice is 1:\n        perform addition and print result\n    elif choice is 2:\n        perform subtraction and print result\n    elif choice is 3:\n        perform multiplication and print result\n    elif choice is 4:\n        perform division and print result\n    elif choice is 5:\n        exit loop\n    print newline"
+      },
+      {
+        "id": "calculator_addition_operation",
+        "name": "addition operation (num1+num2)",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "This is the actual addition operation executed when the user selects addition. It adds num1 and num2, which can be negative, and prints the result.",
+        "pseudo_code": "if choice is 1:\n    result = num1 + num2\n    print result"
       }
     ],
-    "missing_implementations": [
-      "Show the error if any of the input is having the error"
-    ]
+    "missing_implementations": []
   },
   "subtraction": {
     "implementation": [],
