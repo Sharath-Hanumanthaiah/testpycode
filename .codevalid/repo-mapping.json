@@ -71,26 +71,50 @@
       "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
     ]
   },
-  "api_web_vulnerability_protection": {
+  "addition_operation": {
     "implementation": [],
     "missing_implementations": [
-      "Protect all API endpoints against common web vulnerabilities."
+      "Show the error if any of the input is having the error.",
+      "All error messages must be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors must be logged securely for debugging.",
+      "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
     ]
   },
-  "parameterized_queries": {
+  "subtraction_operation": {
     "implementation": [],
-    "missing_implementations": []
+    "missing_implementations": [
+      "All error messages must be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors must be logged securely for debugging.",
+      "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+    ]
   },
-  "csrf_protection": {
+  "multiplication_operation": {
     "implementation": [],
-    "missing_implementations": []
+    "missing_implementations": [
+      "All error messages must be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors must be logged securely for debugging.",
+      "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+    ]
   },
-  "output_sanitization": {
-    "implementation": [],
-    "missing_implementations": []
-  },
-  "rate_limiting": {
-    "implementation": [],
-    "missing_implementations": []
+  "division_operation": {
+    "implementation": [
+      {
+        "id": "calculator_division_branch",
+        "name": "Division operation (main loop branch)",
+        "file_path": "cal.py",
+        "type": "function",
+        "How_is_it_connected_to_implementation": "Implements the division operation as part of the calculator's main loop. When the user selects option 4, it performs division of two user-provided inputs.",
+        "pseudo_code": "LOOP forever:\n    Display menu options\n    Get user choice as integer\n    Get first number as integer input\n    Get second number as integer input\n    IF choice == 4:\n        Output result of num1 / num2"
+      }
+    ],
+    "missing_implementations": [
+      "All error messages must be generic and user-friendly.",
+      "Internal error details must not be exposed to users.",
+      "Detailed errors must be logged securely for debugging.",
+      "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+    ]
   }
 }
