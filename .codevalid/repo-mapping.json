@@ -71,12 +71,26 @@
       "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
     ]
   },
-  "authentication_and_access_control": {
+  "api_web_vulnerability_protection": {
     "implementation": [],
     "missing_implementations": [
-      "Require user authentication before allowing access to calculator operations if the service is accessible over a network or as an API.",
-      "Implement role-based access control if certain operations should be restricted to specific user groups.",
-      "Deny access by default and explicitly allow only authorized users."
+      "Protect all API endpoints against common web vulnerabilities."
     ]
+  },
+  "parameterized_queries": {
+    "implementation": [],
+    "missing_implementations": []
+  },
+  "csrf_protection": {
+    "implementation": [],
+    "missing_implementations": []
+  },
+  "output_sanitization": {
+    "implementation": [],
+    "missing_implementations": []
+  },
+  "rate_limiting": {
+    "implementation": [],
+    "missing_implementations": []
   }
 }
