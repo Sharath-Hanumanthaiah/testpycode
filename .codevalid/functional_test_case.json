@@ -1561,6 +1561,143 @@
           "implementation_id": "main_division_branch"
         }
       ]
+    },
+    {
+      "implementation_id": "calculator_division_branch",
+      "test_cases": [
+        {
+          "id": "division_positive_integers",
+          "name": "test_division_positive_integers",
+          "description": "Divides two positive integers and returns the correct quotient.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=10 and num2=2.",
+            "when": "Division operation is performed.",
+            "then": "Output is 5.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_negative_dividend",
+          "name": "test_division_negative_dividend",
+          "description": "Divides a negative integer by a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=-10 and num2=2.",
+            "when": "Division operation is performed.",
+            "then": "Output is -5.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_negative_divisor",
+          "name": "test_division_negative_divisor",
+          "description": "Divides a positive integer by a negative integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=10 and num2=-2.",
+            "when": "Division operation is performed.",
+            "then": "Output is -5.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_both_negative",
+          "name": "test_division_both_negative",
+          "description": "Divides two negative integers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=-10 and num2=-2.",
+            "when": "Division operation is performed.",
+            "then": "Output is 5.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_zero_dividend",
+          "name": "test_division_zero_dividend",
+          "description": "Divides zero by a positive integer.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=0 and num2=5.",
+            "when": "Division operation is performed.",
+            "then": "Output is 0.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_float_result",
+          "name": "test_division_float_result",
+          "description": "Divides two integers resulting in a non-integer (float) quotient.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=7 and num2=2.",
+            "when": "Division operation is performed.",
+            "then": "Output is 3.5."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_by_zero",
+          "name": "test_division_by_zero",
+          "description": "Attempts to divide by zero, which should raise an error or handle gracefully.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=10 and num2=0.",
+            "when": "Division operation is performed.",
+            "then": "Division by zero error is raised or an error message is displayed."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_large_numbers",
+          "name": "test_division_large_numbers",
+          "description": "Divides two large integers to test for overflow or precision issues.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=1000000000 and num2=2.",
+            "when": "Division operation is performed.",
+            "then": "Output is 500000000.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_small_numbers",
+          "name": "test_division_small_numbers",
+          "description": "Divides two small integers (including 1 and -1).",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 4, enters num1=1 and num2=-1.",
+            "when": "Division operation is performed.",
+            "then": "Output is -1.0."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_non_integer_input",
+          "name": "test_division_non_integer_input",
+          "description": "Handles non-integer input for either operand.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 4, enters num1='a' and num2=2.",
+            "when": "Division operation is performed.",
+            "then": "Input error is raised or an error message is displayed."
+          },
+          "implementation_id": "calculator_division_branch"
+        },
+        {
+          "id": "division_menu_branch_only",
+          "name": "test_division_menu_branch_only",
+          "description": "Ensures division is only performed when option 4 is selected.",
+          "type": "negative",
+          "test_setup": {
+            "given": "User selects option 1, 2, or 3, enters any numbers.",
+            "when": "Operation is performed.",
+            "then": "Division is not performed; no division output."
+          },
+          "implementation_id": "calculator_division_branch"
+        }
+      ]
     }
   ],
   "component": [],
