@@ -1268,134 +1268,158 @@
       "implementation_id": "main_calculator_loop",
       "test_cases": [
         {
-          "id": "multiplication_positive_basic",
-          "name": "test_multiplication_basic",
-          "description": "Verify multiplication of two positive integers.",
+          "id": "add_positive_numbers",
+          "name": "Addition of two positive numbers",
+          "description": "Verifies that the calculator correctly adds two positive integers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 4 and 5.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product 20 is displayed."
+            "given": "User selects addition (choice 1), enters 5 and 7 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 12 as the result."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_positive_zero",
-          "name": "test_multiplication_with_zero",
-          "description": "Verify multiplication when one operand is zero.",
+          "id": "add_negative_numbers",
+          "name": "Addition of two negative numbers",
+          "description": "Checks addition operation with two negative integers.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 0 and 7.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product 0 is displayed."
+            "given": "User selects addition (choice 1), enters -3 and -8 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display -11 as the result."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_positive_negative",
-          "name": "test_multiplication_with_negative",
-          "description": "Verify multiplication of a positive and a negative integer.",
+          "id": "add_positive_and_negative",
+          "name": "Addition of a positive and a negative number",
+          "description": "Ensures correct addition when one number is positive and the other is negative.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters -3 and 6.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product -18 is displayed."
+            "given": "User selects addition (choice 1), enters 10 and -4 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 6 as the result."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_positive_both_negative",
-          "name": "test_multiplication_both_negative",
-          "description": "Verify multiplication of two negative integers.",
+          "id": "add_zero",
+          "name": "Addition with zero",
+          "description": "Tests addition when one or both numbers are zero.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters -2 and -8.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product 16 is displayed."
+            "given": "User selects addition (choice 1), enters 0 and 9 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 9 as the result."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_positive_large_numbers",
-          "name": "test_multiplication_large_numbers",
-          "description": "Verify multiplication with large integer values.",
+          "id": "add_large_numbers",
+          "name": "Addition of large numbers",
+          "description": "Verifies addition with large integer values.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 3, enters 100000 and 200000.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product 20000000000 is displayed."
+            "given": "User selects addition (choice 1), enters 1000000 and 2000000 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 3000000 as the result."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_negative_non_integer_input_choice",
-          "name": "test_non_integer_choice_input",
-          "description": "Verify behavior when user enters a non-integer for the menu choice.",
+          "id": "subtraction",
+          "name": "Subtraction operation",
+          "description": "Checks that subtraction is performed when selected.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects subtraction (choice 2), enters 10 and 4 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 6 as the result."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "multiplication",
+          "name": "Multiplication operation",
+          "description": "Checks that multiplication is performed when selected.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects multiplication (choice 3), enters 3 and 7 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 21 as the result."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division",
+          "name": "Division operation",
+          "description": "Checks that division is performed when selected.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects division (choice 4), enters 20 and 5 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display 4.0 as the result."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "division_by_zero",
+          "name": "Division by zero",
+          "description": "Tests division operation when the second number is zero.",
           "type": "negative",
           "test_setup": {
-            "given": "User enters 'abc' as menu choice.",
-            "when": "Function is called and user input is processed.",
-            "then": "Error message is displayed or input is rejected."
+            "given": "User selects division (choice 4), enters 10 and 0 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Should handle division by zero gracefully (e.g., print error message or handle exception)."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_negative_non_integer_operand",
-          "name": "test_non_integer_operand_input",
-          "description": "Verify behavior when user enters a non-integer for one of the operands.",
-          "type": "negative",
-          "test_setup": {
-            "given": "User selects option 3, enters 'xyz' and 5.",
-            "when": "Function is called and user input is processed.",
-            "then": "Error message is displayed or input is rejected."
-          },
-          "implementation_id": "main_calculator_loop"
-        },
-        {
-          "id": "multiplication_negative_menu_out_of_range",
-          "name": "test_menu_choice_out_of_range",
-          "description": "Verify behavior when user enters a menu choice not in 1-5.",
+          "id": "invalid_menu_choice",
+          "name": "Invalid menu choice",
+          "description": "Checks behavior when user enters an invalid menu option.",
           "type": "negative",
           "test_setup": {
             "given": "User enters 9 as menu choice.",
-            "when": "Function is called and user input is processed.",
-            "then": "Error message is displayed or input is rejected."
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Should print an error or invalid choice message and prompt again."
           },
           "implementation_id": "main_calculator_loop"
         },
         {
-          "id": "multiplication_positive_exit",
-          "name": "test_exit_option",
-          "description": "Verify that selecting exit option displays exit message and breaks the loop.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 5.",
-            "when": "Function is called and user input is processed.",
-            "then": "Exit message is displayed and loop terminates."
-          },
-          "implementation_id": "main_calculator_loop"
-        },
-        {
-          "id": "multiplication_positive_menu_loop",
-          "name": "test_menu_loop_continues",
-          "description": "Verify that after a multiplication operation, the menu is displayed again.",
-          "type": "positive",
-          "test_setup": {
-            "given": "User selects option 3, enters 2 and 3, then selects option 5.",
-            "when": "Function is called and user input is processed.",
-            "then": "Product 6 is displayed, menu is shown again, and then exit message is displayed."
-          },
-          "implementation_id": "main_calculator_loop"
-        },
-        {
-          "id": "multiplication_negative_empty_input",
-          "name": "test_empty_input",
-          "description": "Verify behavior when user provides empty input for choice or operands.",
+          "id": "non_integer_input_for_numbers",
+          "name": "Non-integer input for numbers",
+          "description": "Tests behavior when user enters a non-integer value for number input.",
           "type": "negative",
           "test_setup": {
-            "given": "User presses Enter without typing a value for choice or operands.",
-            "when": "Function is called and user input is processed.",
-            "then": "Error message is displayed or input is rejected."
+            "given": "User selects addition (choice 1), enters 'abc' as first number.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Should handle invalid input gracefully (e.g., print error message or prompt again)."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "exit_option",
+          "name": "Exit option",
+          "description": "Checks that the program exits when the exit option is selected.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects exit (choice 5).",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Should print exiting message and terminate the loop."
+          },
+          "implementation_id": "main_calculator_loop"
+        },
+        {
+          "id": "add_min_max_integers",
+          "name": "Addition of minimum and maximum integer values",
+          "description": "Tests addition with Python's minimum and maximum integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects addition (choice 1), enters -2147483648 and 2147483647 as numbers.",
+            "when": "main_calculator_loop is called and user inputs are provided.",
+            "then": "Output should display -1 as the result."
           },
           "implementation_id": "main_calculator_loop"
         }
@@ -1994,6 +2018,167 @@
             "then": "Program prints 'Output: 5', then 'Exiting...' and terminates."
           },
           "implementation_id": "cal_py_main_loop_addition"
+        }
+      ]
+    },
+    {
+      "implementation_id": "calculator_subtraction_branch_cal.py",
+      "test_cases": [
+        {
+          "id": "subtraction_positive_integers",
+          "name": "Subtract two positive integers",
+          "description": "Verify subtraction of two positive integers where num1 > num2.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 10, num2 = 3, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is 7"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_negative_integers",
+          "name": "Subtract two negative integers",
+          "description": "Verify subtraction of two negative integers where num1 < num2.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -5, num2 = -2, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is -3"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_zero",
+          "name": "Subtract zero from a number",
+          "description": "Verify subtraction when one operand is zero.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0, num2 = 8, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is -8"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_result_zero",
+          "name": "Subtract a number from itself",
+          "description": "Verify subtraction when both operands are equal.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 15, num2 = 15, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is 0"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_float_numbers",
+          "name": "Subtract two floating point numbers",
+          "description": "Verify subtraction with floating point operands.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 5.5, num2 = 2.2, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is 3.3"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_large_numbers",
+          "name": "Subtract large numbers",
+          "description": "Verify subtraction with large integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 1000000000, num2 = 999999999, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is 1"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_negative_result",
+          "name": "Subtract larger number from smaller number",
+          "description": "Verify subtraction when num2 > num1, resulting in a negative output.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 3, num2 = 10, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is -7"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_invalid_choice",
+          "name": "Invalid menu choice",
+          "description": "Verify that subtraction is not performed if the user does not select option 2.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 5, num2 = 3, user selects option 1 (not 2)",
+            "when": "Main loop is executed",
+            "then": "Subtraction is not performed; no subtraction output"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_non_numeric_input",
+          "name": "Non-numeric input for operands",
+          "description": "Verify behavior when user enters non-numeric input for num1 or num2.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 = 'abc', num2 = 5, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Error is raised or handled gracefully (e.g., input validation error message)"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_missing_input",
+          "name": "Missing input for operands",
+          "description": "Verify behavior when user does not provide input for num1 or num2.",
+          "type": "negative",
+          "test_setup": {
+            "given": "num1 is missing, num2 = 5, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Error is raised or handled gracefully (e.g., prompt for input again)"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_boundary_min_int",
+          "name": "Subtract at minimum integer boundary",
+          "description": "Verify subtraction when operands are at the minimum integer value.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = -2147483648, num2 = 1, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is -2147483649"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_boundary_max_int",
+          "name": "Subtract at maximum integer boundary",
+          "description": "Verify subtraction when operands are at the maximum integer value.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 2147483647, num2 = 1, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is 2147483646"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
+        },
+        {
+          "id": "subtraction_float_precision",
+          "name": "Subtract floating point numbers with high precision",
+          "description": "Verify subtraction with floating point numbers that may cause precision issues.",
+          "type": "positive",
+          "test_setup": {
+            "given": "num1 = 0.1, num2 = 0.2, user selects option 2",
+            "when": "Subtraction branch is executed",
+            "then": "Output is approximately -0.1 (considering floating point precision)"
+          },
+          "implementation_id": "calculator_subtraction_branch_cal.py"
         }
       ]
     }
