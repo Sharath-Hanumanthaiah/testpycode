@@ -2,19 +2,16 @@
   "addition": {
     "implementation": [
       {
-        "id": "main_calculator_loop",
-        "name": "main calculator loop",
+        "id": "calculator_addition_branch",
+        "name": "Addition (choice == 1)",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "This is the main loop that handles user input for addition and other operations. It reads user input, performs addition if selected, and prints the result.",
-        "pseudo_code": "PRINT welcome message\nLOOP forever:\n    PRINT menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice is 1:\n        PRINT sum of numbers\n    ELSE IF choice is 2:\n        PRINT difference\n    ELSE IF choice is 3:\n        PRINT product\n    ELSE IF choice is 4:\n        PRINT division\n    ELSE IF choice is 5:\n        PRINT exit message\n        BREAK loop\n    PRINT newline"
+        "How_is_it_connected_to_implementation": "Implements the addition operation when the user selects option 1. It reads two numbers from input and prints their sum.",
+        "pseudo_code": "LOOP forever:\n    DISPLAY menu options\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice is 1:\n        PRINT sum of first and second number\n    ELSE IF choice is 2:\n        PRINT difference\n    ELSE IF choice is 3:\n        PRINT product\n    ELSE IF choice is 4:\n        PRINT quotient\n    ELSE IF choice is 5:\n        PRINT exit message\n        BREAK loop\n    PRINT newline"
       }
     ],
     "missing_implementations": [
-      "All error messages should be generic and user-friendly.",
-      "Internal error details must not be exposed to users.",
-      "Detailed errors should be logged securely for debugging.",
-      "All user inputs must be strictly validated and sanitized to ensure they are numbers within acceptable ranges and free from malicious content."
+      "Check for the error with negative number"
     ]
   },
   "subtraction": {
