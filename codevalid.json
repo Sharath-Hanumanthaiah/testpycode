@@ -6,9 +6,10 @@
       "description": "Adds given numbers and shares the output.",
       "conditions": [
         "Input numbers can be negative.",
-        "Output can be negative or positive."
+        "Output can be negative or positive.",
+        "Check for the error with negative number."
       ],
-      "change_status": "new"
+      "change_status": "updated"
     },
     {
       "id": "subtraction",
@@ -18,7 +19,7 @@
         "Input numbers can be negative or positive.",
         "Output can be negative or positive."
       ],
-      "change_status": "new"
+      "change_status": ""
     },
     {
       "id": "multiplication",
@@ -29,7 +30,7 @@
         "Output can be negative or positive.",
         "Output should not be decimal."
       ],
-      "change_status": "new"
+      "change_status": ""
     },
     {
       "id": "division",
@@ -40,9 +41,9 @@
         "Should not be divided by zero.",
         "Always handle the exception of dividing by zero."
       ],
-      "change_status": "new"
+      "change_status": ""
     }
   ],
-  "last_updated": "2026-01-02T19:12:37.853366",
+  "last_updated": "2026-01-02T19:19:49.512784",
   "version": "1.0"
 }
