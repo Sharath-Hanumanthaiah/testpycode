@@ -87,8 +87,88 @@
       "suggestion": "Log all calculation requests and responses, including user identifiers if authentication is implemented, for audit and monitoring purposes.",
       "priority": "Medium",
       "rationale": "Audit logs help detect suspicious activity and support forensic investigations in case of a security incident."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "System Design Patterns",
+      "breakdown_id": "general",
+      "suggestion": "Define a clear modular structure (e.g., service or component per operation: addition, subtraction, multiplication, division) to ensure separation of concerns and ease of future extensibility.",
+      "priority": "High",
+      "rationale": "A modular design allows for easier maintenance, testing, and future expansion (such as adding new operations or features) without impacting existing functionality."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "API Design Patterns",
+      "breakdown_id": "general",
+      "suggestion": "Specify and document a standard API interface (e.g., RESTful endpoints or function signatures) for each operation, including input validation and error response formats.",
+      "priority": "Medium",
+      "rationale": "Clear API design and documentation facilitate integration, client development, and future interoperability with other systems."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Logging and Monitoring Architecture",
+      "breakdown_id": "general",
+      "suggestion": "Integrate structured logging and basic monitoring to track operation usage, errors, and performance metrics.",
+      "priority": "Medium",
+      "rationale": "Logging and monitoring are essential for troubleshooting, auditing, and ensuring system health, especially as the system scales or is integrated into larger solutions."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Deployment & Infrastructure",
+      "breakdown_id": "general",
+      "suggestion": "Plan for environment configuration management (e.g., using environment variables or configuration files) to support different deployment environments (development, testing, production).",
+      "priority": "Low",
+      "rationale": "Proper configuration management enables smoother deployments, easier environment-specific customization, and reduces operational risks."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Input Validation & Sanitization",
+      "breakdown_id": "general",
+      "suggestion": "Implement strict input validation to ensure only numeric values are accepted for all operations (addition, subtraction, multiplication, division). Reject or sanitize any non-numeric or malformed input.",
+      "priority": "High",
+      "rationale": "Unvalidated input can lead to injection attacks, application crashes, or unexpected behavior. Ensuring only valid numeric input is processed reduces risk of vulnerabilities."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Input Validation & Sanitization",
+      "breakdown_id": "general",
+      "suggestion": "Sanitize all user inputs to prevent code injection, especially if inputs are used in logs, error messages, or further processing.",
+      "priority": "High",
+      "rationale": "Sanitizing input helps prevent injection attacks and ensures that malicious payloads cannot be executed or stored."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Error Handling",
+      "breakdown_id": "division",
+      "suggestion": "Ensure error messages for division by zero and other exceptions do not leak sensitive information about the system or stack traces.",
+      "priority": "Medium",
+      "rationale": "Detailed error messages can expose internal logic or vulnerabilities to attackers. Generic error handling improves security posture."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Authentication & Authorization",
+      "breakdown_id": "general",
+      "suggestion": "If the application is exposed to multiple users, implement authentication and authorization to restrict access to calculation functions as appropriate.",
+      "priority": "Medium",
+      "rationale": "Unauthorized access to application functions can lead to misuse or abuse. Proper authentication and authorization controls limit access to legitimate users."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Security Best Practices",
+      "breakdown_id": "general",
+      "suggestion": "Ensure all data transmission between client and server uses secure protocols (HTTPS/TLS) to prevent interception or tampering.",
+      "priority": "High",
+      "rationale": "Secure communication protects data integrity and confidentiality, especially if sensitive data is transmitted."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Audit Logging",
+      "breakdown_id": "general",
+      "suggestion": "Implement audit logging for calculation requests and errors, ensuring logs do not contain sensitive user input or expose PII.",
+      "priority": "Medium",
+      "rationale": "Audit logs help detect misuse and support incident response, but must be designed to avoid leaking sensitive information."
     }
   ],
-  "last_updated": "2026-01-02T19:30:09.616914",
+  "last_updated": "2026-01-02T19:35:10.340683",
   "version": "1.0"
 }
