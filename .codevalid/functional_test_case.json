@@ -1698,6 +1698,155 @@
           "implementation_id": "calculator_division_branch"
         }
       ]
+    },
+    {
+      "implementation_id": "calculator_addition_branch",
+      "test_cases": [
+        {
+          "id": "addition_positive_integers",
+          "name": "Addition of two positive integers",
+          "description": "Verifies that the function correctly adds two positive integers when choice is 1.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=5, second_number=7",
+            "when": "User selects addition and enters 5 and 7",
+            "then": "Output is 12"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_negative_integers",
+          "name": "Addition of two negative integers",
+          "description": "Checks addition of two negative numbers.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=-3, second_number=-8",
+            "when": "User selects addition and enters -3 and -8",
+            "then": "Output is -11"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_zero_and_integer",
+          "name": "Addition of zero and an integer",
+          "description": "Ensures adding zero to a number returns the number itself.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=0, second_number=9",
+            "when": "User selects addition and enters 0 and 9",
+            "then": "Output is 9"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_large_numbers",
+          "name": "Addition of large numbers",
+          "description": "Tests addition with large integer values to check for overflow or precision issues.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=999999999, second_number=888888888",
+            "when": "User selects addition and enters 999999999 and 888888888",
+            "then": "Output is 1888888887"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_negative_and_positive",
+          "name": "Addition of negative and positive integer",
+          "description": "Checks addition where one number is negative and the other is positive.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=-10, second_number=15",
+            "when": "User selects addition and enters -10 and 15",
+            "then": "Output is 5"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_min_max_int",
+          "name": "Addition of minimum and maximum integer values",
+          "description": "Tests addition with system's minimum and maximum integer values.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=-2147483648, second_number=2147483647",
+            "when": "User selects addition and enters -2147483648 and 2147483647",
+            "then": "Output is -1"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_float_input",
+          "name": "Addition with float input",
+          "description": "Checks behavior when user enters a float instead of integer.",
+          "type": "negative",
+          "test_setup": {
+            "given": "choice=1, first_number=3.5, second_number=2",
+            "when": "User selects addition and enters 3.5 and 2",
+            "then": "Program raises ValueError or prompts for integer input"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_non_numeric_input",
+          "name": "Addition with non-numeric input",
+          "description": "Checks behavior when user enters a non-numeric value.",
+          "type": "negative",
+          "test_setup": {
+            "given": "choice=1, first_number='a', second_number=2",
+            "when": "User selects addition and enters 'a' and 2",
+            "then": "Program raises ValueError or prompts for valid integer input"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_no_input",
+          "name": "Addition with missing input",
+          "description": "Checks behavior when user provides no input for numbers.",
+          "type": "negative",
+          "test_setup": {
+            "given": "choice=1, first_number=, second_number=",
+            "when": "User selects addition and presses enter without input",
+            "then": "Program raises ValueError or prompts for input"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_menu_loop",
+          "name": "Menu loop continues after addition",
+          "description": "Ensures the menu is displayed again after performing addition.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=2, second_number=3",
+            "when": "User selects addition and completes operation",
+            "then": "Menu is displayed again for next operation"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_exit",
+          "name": "Exit after addition",
+          "description": "Checks that the program can exit after performing addition and then selecting exit.",
+          "type": "positive",
+          "test_setup": {
+            "given": "choice=1, first_number=1, second_number=2, then choice=5",
+            "when": "User performs addition, then selects exit",
+            "then": "Sum is printed, then exit message is displayed and loop breaks"
+          },
+          "implementation_id": "calculator_addition_branch"
+        },
+        {
+          "id": "addition_invalid_choice",
+          "name": "Invalid menu choice",
+          "description": "Checks behavior when user enters an invalid menu choice.",
+          "type": "negative",
+          "test_setup": {
+            "given": "choice=9, first_number=1, second_number=2",
+            "when": "User enters invalid menu choice",
+            "then": "No addition is performed, program may prompt for valid choice or continue loop"
+          },
+          "implementation_id": "calculator_addition_branch"
+        }
+      ]
     }
   ],
   "component": [],
