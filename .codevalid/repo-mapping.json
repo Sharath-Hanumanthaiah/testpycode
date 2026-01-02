@@ -2,12 +2,12 @@
   "addition": {
     "implementation": [
       {
-        "id": "cal_py_main_loop_addition",
-        "name": "main_loop (Addition case)",
+        "id": "main_calculator_loop",
+        "name": "main_calculator_loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "The main loop in cal.py handles user input for the calculator. When the user selects 'Addition', it reads two numbers (which can be negative), adds them, and prints the result. This directly implements the addition requirement.",
-        "pseudo_code": "Print 'Welcome to Calculator App'\nLoop forever:\n    Print menu options (Addition, Subtraction, Multiplication, Division, Exit)\n    Get user choice as integer\n    Get first number as integer\n    Get second number as integer\n    If choice is 1 (Addition):\n        Print 'Output: ', num1 + num2\n    Else if choice is 2 (Subtraction):\n        Print 'Output: ', num1 - num2\n    Else if choice is 3 (Multiplication):\n        Print 'Output: ', num1 * num2\n    Else if choice is 4 (Division):\n        Print 'Output: ', num1 / num2\n    Else if choice is 5 (Exit):\n        Print 'Exiting...'\n        Break loop\n    Print a blank line"
+        "How_is_it_connected_to_implementation": "Implements the main calculator logic, including addition. Handles user input for numbers (which can be negative), processes the addition operation, and displays the output.",
+        "pseudo_code": "Print welcome message\nLoop forever:\n    Print menu options\n    Get user choice as integer\n    Get first number as integer input\n    Get second number as integer input\n    If choice is 1 (Addition):\n        Print output as num1 + num2\n    Else if choice is 2 (Subtraction):\n        Print output as num1 - num2\n    Else if choice is 3 (Multiplication):\n        Print output as num1 * num2\n    Else if choice is 4 (Division):\n        Print output as num1 / num2\n    Else if choice is 5 (Exit):\n        Print exiting message\n        Break loop\n    Print a blank line"
       }
     ],
     "missing_implementations": []
@@ -15,16 +15,16 @@
   "subtraction": {
     "implementation": [
       {
-        "id": "cal_py_main_loop",
-        "name": "main calculator loop",
+        "id": "calculator_subtraction_branch_cal.py",
+        "name": "Subtraction branch in calculator main loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the subtraction operation as part of a menu-driven calculator. When the user selects option 2 (Subtraction), it subtracts the second number from the first and prints the output.",
-        "pseudo_code": "LOOP forever:\n    Display menu options\n    Get user choice\n    Get first number (num1)\n    Get second number (num2)\n    IF choice is 1:\n        Output num1 + num2\n    ELSE IF choice is 2:\n        Output num1 - num2\n    ELSE IF choice is 3:\n        Output num1 * num2\n    ELSE IF choice is 4:\n        Output num1 / num2\n    ELSE IF choice is 5:\n        Exit loop\n    Print a blank line"
+        "How_is_it_connected_to_implementation": "Implements the subtraction operation when the user selects option 2. It subtracts num2 from num1 and prints the output.",
+        "pseudo_code": "LOOP forever:\n    Display calculator menu\n    Get user choice\n    Get num1 and num2 from user\n    IF choice is 2 (Subtraction):\n        Compute result = num1 - num2\n        Print result"
       }
     ],
     "missing_implementations": [
-      "Subtracts the smaller number from the greater number (the code currently always does num1 - num2, not max(num1, num2) - min(num1, num2))"
+      "Subtracts the smaller number from the greater number (currently always does num1 - num2, not max(num1, num2) - min(num1, num2))"
     ]
   },
   "multiplication": {
