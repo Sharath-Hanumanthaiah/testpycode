@@ -1,8 +1,16 @@
-# Security Requirement: Authentication and Access Control
-
-To protect the calculator operations from unauthorized access, authentication and access control must be implemented if the application is exposed beyond a trusted environment.
-
-## Requirements
-- Require user authentication before allowing access to calculator operations if the service is accessible over a network or as an API.
-- Implement role-based access control if certain operations should be restricted to specific user groups.
-- Deny access by default and explicitly allow only authorized users.
+# project
+requirement
+1. Addition: given number should be added and share the output
+    - it can have negative number
+    - output can be negative or positive
+2. Subtraction: given two number, greater number should be subtracted by the smaller one
+    - output should be negative or positive
+    - input number can be negative or positive
+3. Multiplication: given two number multiple the muber and share the output
+    - output can be negative or positive
+    - input can be negative or positive
+    - output should not decimal
+4. Division: given two number divide numbers and get the output
+    - should not be divided by zero
+    - always handle the exception of dividing by zero
+    - input number can be negative or positive
