@@ -1,17 +1,48 @@
 {
   "breakdowns": [
     {
-      "id": "authentication_and_access_control",
-      "header": "Authentication and Access Control",
-      "description": "Protects calculator operations from unauthorized access by requiring authentication and implementing access control measures.",
+      "id": "addition",
+      "header": "Addition",
+      "description": "Adds given numbers and shares the output.",
       "conditions": [
-        "Require user authentication before allowing access to calculator operations if the service is accessible over a network or as an API.",
-        "Implement role-based access control if certain operations should be restricted to specific user groups.",
-        "Deny access by default and explicitly allow only authorized users."
+        "Input numbers can be negative.",
+        "Output can be negative or positive."
+      ],
+      "change_status": "new"
+    },
+    {
+      "id": "subtraction",
+      "header": "Subtraction",
+      "description": "Subtracts the smaller number from the greater number and shares the output.",
+      "conditions": [
+        "Input numbers can be negative or positive.",
+        "Output can be negative or positive."
+      ],
+      "change_status": "new"
+    },
+    {
+      "id": "multiplication",
+      "header": "Multiplication",
+      "description": "Multiplies two given numbers and shares the output.",
+      "conditions": [
+        "Input numbers can be negative or positive.",
+        "Output can be negative or positive.",
+        "Output should not be decimal."
+      ],
+      "change_status": "new"
+    },
+    {
+      "id": "division",
+      "header": "Division",
+      "description": "Divides two given numbers and shares the output.",
+      "conditions": [
+        "Input numbers can be negative or positive.",
+        "Should not be divided by zero.",
+        "Always handle the exception of dividing by zero."
       ],
       "change_status": "new"
     }
   ],
-  "last_updated": "2025-12-31T20:28:48.444047",
+  "last_updated": "2026-01-02T19:12:37.853366",
   "version": "1.0"
 }
