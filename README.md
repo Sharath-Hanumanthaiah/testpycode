@@ -10,6 +10,7 @@ requirement
     - output can be negative or positive
     - input can be negative or positive
     - output should not decimal
+    - check for negative number error
 4. Division: given two number divide numbers and get the output
     - should not be divided by zero
     - always handle the exception of dividing by zero
