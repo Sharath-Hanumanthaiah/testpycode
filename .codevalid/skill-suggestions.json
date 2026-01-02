@@ -87,8 +87,88 @@
       "suggestion": "Handle errors gracefully and avoid exposing internal system details in error messages, especially for division by zero or invalid input.",
       "priority": "High",
       "rationale": "Detailed error messages can leak sensitive information about the system, aiding attackers in exploiting vulnerabilities."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "System Design Patterns",
+      "breakdown_id": "general",
+      "suggestion": "Define a clear API contract (e.g., RESTful endpoints) for each arithmetic operation to ensure modularity and ease of integration.",
+      "priority": "High",
+      "rationale": "Explicit API design enables separation of concerns, allows for future extensibility, and supports integration with other services or clients."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Error Handling and Resilience",
+      "breakdown_id": "general",
+      "suggestion": "Implement a standardized error handling mechanism across all operations, including structured error responses and logging for invalid inputs (e.g., division by zero, invalid number formats).",
+      "priority": "High",
+      "rationale": "Consistent error handling improves system reliability, debuggability, and user experience."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Scalability & Performance",
+      "breakdown_id": "general",
+      "suggestion": "Consider stateless service design to allow for horizontal scaling if the service is expected to handle a high volume of arithmetic requests.",
+      "priority": "Medium",
+      "rationale": "Statelessness enables easy scaling and load balancing, which is important for performance and reliability under load."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Deployment & Infrastructure",
+      "breakdown_id": "general",
+      "suggestion": "Define a basic CI/CD pipeline for automated testing and deployment of arithmetic operation services.",
+      "priority": "Medium",
+      "rationale": "Automated deployment reduces manual errors and ensures consistent delivery of updates and bug fixes."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Logging and Monitoring",
+      "breakdown_id": "general",
+      "suggestion": "Implement centralized logging and basic monitoring for all arithmetic operations to track usage patterns and quickly identify issues.",
+      "priority": "Medium",
+      "rationale": "Logging and monitoring are essential for maintaining system health and troubleshooting production issues."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Data Architecture",
+      "breakdown_id": "general",
+      "suggestion": "Clarify if there is a need to persist calculation history or results, and if so, define appropriate data storage and retrieval mechanisms.",
+      "priority": "Low",
+      "rationale": "Persisting results may be required for audit, analytics, or user history; planning for this early avoids future rework."
+    },
+    {
+      "skill_name": "architecture-skill",
+      "category": "Documentation Requirements",
+      "breakdown_id": "general",
+      "suggestion": "Document the API endpoints, input/output formats, error codes, and usage examples for all arithmetic operations.",
+      "priority": "High",
+      "rationale": "Comprehensive documentation is critical for maintainability and for enabling other developers or systems to integrate with the service."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Data Protection",
+      "breakdown_id": "general",
+      "suggestion": "Ensure that any shared output or stored calculation results are protected, especially if they contain sensitive or personally identifiable information (PII). Use encryption for data at rest and in transit.",
+      "priority": "Medium",
+      "rationale": "Protecting data ensures confidentiality and integrity, especially if outputs are shared or stored. Encryption mitigates risks of data leakage."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Security Best Practices",
+      "breakdown_id": "general",
+      "suggestion": "Use secure communication protocols (HTTPS/TLS) for any data transmission, and implement audit logging for calculation requests and errors.",
+      "priority": "Medium",
+      "rationale": "Secure communication prevents interception of sensitive data. Audit logs help detect misuse, monitor activity, and support incident response."
+    },
+    {
+      "skill_name": "security-skill",
+      "category": "Vulnerability Assessment",
+      "breakdown_id": "general",
+      "suggestion": "Handle errors gracefully without exposing stack traces or sensitive system information in error messages.",
+      "priority": "High",
+      "rationale": "Exposing internal error details can aid attackers in identifying vulnerabilities and exploiting the system."
     }
   ],
-  "last_updated": "2026-01-02T19:13:12.140804",
+  "last_updated": "2026-01-02T19:20:32.199631",
   "version": "1.0"
 }
