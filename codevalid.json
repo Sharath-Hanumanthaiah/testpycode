@@ -6,6 +6,7 @@
       "description": "Adds given numbers and shares the output.",
       "conditions": [
         "Input numbers can be negative.",
+        "Input numbers can be zero.",
         "Output can be negative or positive."
       ],
       "change_status": "updated"
@@ -13,7 +14,7 @@
     {
       "id": "subtraction",
       "header": "Subtraction",
-      "description": "Given two numbers, subtracts the smaller number from the greater number and shares the output.",
+      "description": "Given two numbers, the greater number should be subtracted by the smaller one and share the output.",
       "conditions": [
         "Input numbers can be negative or positive.",
         "Output can be negative or positive."
@@ -27,9 +28,10 @@
       "conditions": [
         "Input numbers can be negative or positive.",
         "Output can be negative or positive.",
-        "Output should not be decimal."
+        "Output should not be decimal.",
+        "Check for negative number error."
       ],
-      "change_status": ""
+      "change_status": "updated"
     },
     {
       "id": "division",
@@ -43,6 +45,6 @@
       "change_status": ""
     }
   ],
-  "last_updated": "2026-01-02T19:29:33.268061",
+  "last_updated": "2026-01-03T08:51:50.425319",
   "version": "1.0"
 }
