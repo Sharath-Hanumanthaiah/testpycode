@@ -2,12 +2,12 @@
   "addition": {
     "implementation": [
       {
-        "id": "main_calculator_loop_cal_py",
-        "name": "main_calculator_loop",
+        "id": "cal_py_main_loop",
+        "name": "main_loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "This loop is the main entry point for the calculator app. It presents the user with options, takes input for two numbers, and performs addition when the user selects option 1. The addition operation directly implements the requirement to add given numbers and share the output.",
-        "pseudo_code": "PRINT 'Welcome to Calculator App'\nLOOP forever:\n    PRINT menu options (Addition, Subtraction, Multiplication, Division, Exit)\n    GET user choice as integer\n    GET first number as integer\n    GET second number as integer\n    IF choice == 1:\n        PRINT 'Output: ', num1 + num2\n    ELSE IF choice == 2:\n        PRINT 'Output: ', num1 - num2\n    ELSE IF choice == 3:\n        PRINT 'Output: ', num1 * num2\n    ELSE IF choice == 4:\n        PRINT 'Output: ', num1 / num2\n    ELSE IF choice == 5:\n        PRINT 'Exiting...'\n        BREAK\n    PRINT newline"
+        "How_is_it_connected_to_implementation": "The main loop in cal.py implements the addition operation. When the user selects 'Addition', it takes two integer inputs (which can be negative or zero), adds them, and prints the result. This satisfies all requirement conditions.",
+        "pseudo_code": "Print 'Welcome to Calculator App'\nLoop forever:\n    Print menu options (Addition, Subtraction, Multiplication, Division, Exit)\n    Get user choice as integer\n    Get first number as integer input\n    Get second number as integer input\n    If choice is 1:\n        Print 'Output: ', first number + second number\n    Else if choice is 2:\n        Print 'Output: ', first number - second number\n    Else if choice is 3:\n        Print 'Output: ', first number * second number\n    Else if choice is 4:\n        Print 'Output: ', first number / second number\n    Else if choice is 5:\n        Print 'Exiting...'\n        Break loop\n    Print a blank line"
       }
     ],
     "missing_implementations": []
@@ -19,13 +19,12 @@
         "name": "main calculator loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the calculator logic, including the subtraction operation as one of the menu options. The subtraction is performed directly in the main loop when the user selects option 2.",
-        "pseudo_code": "Display 'Welcome to Calculator App'\nLoop forever:\n    Display menu options (Addition, Subtraction, Multiplication, Division, Exit)\n    Get user choice\n    Get first number from user\n    Get second number from user\n    If choice is 1:\n        Output num1 + num2\n    Else if choice is 2:\n        Output num1 - num2\n    Else if choice is 3:\n        Output num1 * num2\n    Else if choice is 4:\n        Output num1 / num2\n    Else if choice is 5:\n        Print 'Exiting...'\n        Break loop\n    Print a blank line"
+        "How_is_it_connected_to_implementation": "This is the main loop of the calculator app. It handles user input for operation selection and number entry, and executes the subtraction operation when selected.",
+        "pseudo_code": "LOOP forever:\n    DISPLAY menu options\n    GET user choice\n    GET first number\n    GET second number\n    IF choice is 1:\n        OUTPUT num1 + num2\n    ELSE IF choice is 2:\n        OUTPUT num1 - num2\n    ELSE IF choice is 3:\n        OUTPUT num1 * num2\n    ELSE IF choice is 4:\n        OUTPUT num1 / num2\n    ELSE IF choice is 5:\n        EXIT loop\n    PRINT newline"
       }
     ],
     "missing_implementations": [
-      "Subtracts the smaller number from the greater number (currently always does num1 - num2, not max-min)",
-      "No explicit handling for which number is greater; output can be negative but does not guarantee 'subtract smaller from greater'"
+      "The program does not ensure that the greater number is subtracted by the smaller one; it simply computes num1 - num2 as entered by the user. It does not automatically determine which number is greater and perform greater - smaller."
     ]
   },
   "multiplication": {
@@ -35,11 +34,14 @@
         "name": "main_calculator_loop",
         "file_path": "cal.py",
         "type": "function",
-        "How_is_it_connected_to_implementation": "Implements the calculator logic, including multiplication. When the user selects option 3, it multiplies two numbers and prints the output.",
-        "pseudo_code": "Print welcome message\nLoop forever:\n    Print menu options\n    Get user choice as integer\n    Get first number as integer\n    Get second number as integer\n    If choice is 1:\n        Print sum of numbers\n    Else if choice is 2:\n        Print difference of numbers\n    Else if choice is 3:\n        Print product of numbers (num1 * num2)\n    Else if choice is 4:\n        Print division of numbers\n    Else if choice is 5:\n        Print exit message and break loop\n    Print a blank line"
+        "How_is_it_connected_to_implementation": "Implements the calculator logic, including multiplication. Handles user input, operation selection, and output. The multiplication operation is executed when the user selects option 3.",
+        "pseudo_code": "Print 'Welcome to Calculator App'\nLoop forever:\n    Print menu options (Addition, Subtraction, Multiplication, Division, Exit)\n    Get user choice\n    Get first number (num1)\n    Get second number (num2)\n    If choice is 1:\n        Print num1 + num2\n    Else if choice is 2:\n        Print num1 - num2\n    Else if choice is 3:\n        Print num1 * num2\n    Else if choice is 4:\n        Print num1 / num2\n    Else if choice is 5:\n        Print 'Exiting...'\n        Break loop\n    Print a blank line"
       }
     ],
-    "missing_implementations": []
+    "missing_implementations": [
+      "Output should not be decimal.",
+      "Check for negative number error."
+    ]
   },
   "division": {
     "implementation": [
