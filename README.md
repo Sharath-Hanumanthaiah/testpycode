@@ -3,7 +3,6 @@ requirement
 1. Addition: given number should be added and share the output
     - it can have negative number
     - output can be negative or positive
-    - consider value as zero also
 2. Subtraction: given two number, greater number should be subtracted by the smaller one
     - output should be negative or positive
     - input number can be negative or positive
