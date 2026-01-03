@@ -177,134 +177,158 @@
       "implementation_id": "cal_py_main_loop",
       "test_cases": [
         {
-          "id": "subtraction_positive_normal",
-          "name": "subtraction_of_two_positive_numbers",
-          "description": "Subtracts a smaller positive number from a larger positive number.",
+          "id": "multiplication_positive_integers",
+          "name": "test_multiplication_with_positive_integers",
+          "description": "Verify multiplication of two positive integers returns correct result.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 10 as the first number and 3 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is 7."
+            "given": "User selects option 3, enters num1=6 and num2=7",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is 42"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_negative_result",
-          "name": "subtraction_resulting_in_negative",
-          "description": "Subtracts a larger number from a smaller number, resulting in a negative output.",
+          "id": "multiplication_negative_and_positive",
+          "name": "test_multiplication_with_negative_and_positive",
+          "description": "Verify multiplication of a negative and a positive integer returns correct result.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 3 as the first number and 10 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is -7."
+            "given": "User selects option 3, enters num1=-5 and num2=8",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is -40"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_zero_result",
-          "name": "subtraction_resulting_in_zero",
-          "description": "Subtracts two equal numbers, resulting in zero.",
+          "id": "multiplication_two_negatives",
+          "name": "test_multiplication_with_two_negatives",
+          "description": "Verify multiplication of two negative numbers returns a positive result.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 5 as the first number and 5 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is 0."
+            "given": "User selects option 3, enters num1=-3 and num2=-4",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is 12"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_negative_numbers",
-          "name": "subtraction_with_negative_numbers",
-          "description": "Subtracts a negative number from another negative number.",
+          "id": "multiplication_with_zero",
+          "name": "test_multiplication_with_zero",
+          "description": "Verify multiplication with zero returns zero.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters -4 as the first number and -7 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is 3."
+            "given": "User selects option 3, enters num1=0 and num2=12345",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is 0"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_float_numbers",
-          "name": "subtraction_with_float_numbers",
-          "description": "Subtracts two floating-point numbers.",
+          "id": "multiplication_large_numbers",
+          "name": "test_multiplication_with_large_numbers",
+          "description": "Verify multiplication with large numbers returns correct result.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 5.5 as the first number and 2.2 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is 3.3."
+            "given": "User selects option 3, enters num1=1000000 and num2=1000000",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is 1000000000000"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_large_numbers",
-          "name": "subtraction_with_large_numbers",
-          "description": "Subtracts two large numbers to test for overflow or precision issues.",
+          "id": "multiplication_with_floats",
+          "name": "test_multiplication_with_floats",
+          "description": "Verify multiplication with floating point numbers returns correct result.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 1000000000 as the first number and 999999999 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The output is 1."
+            "given": "User selects option 3, enters num1=2.5 and num2=4.2",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is 10.5"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_negative_non_numeric_input",
-          "name": "subtraction_with_non_numeric_input",
-          "description": "Handles non-numeric input for one or both numbers.",
+          "id": "multiplication_boundary_max_float",
+          "name": "test_multiplication_with_max_float",
+          "description": "Verify multiplication with maximum float values handles overflow or returns correct result.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 3, enters num1=1.79e308 and num2=2",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Output is inf or appropriate overflow handling"
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_invalid_input_non_numeric",
+          "name": "test_multiplication_with_non_numeric_input",
+          "description": "Verify that non-numeric input for numbers is handled gracefully.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters 'abc' as the first number and 5 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The program displays an error message indicating invalid input."
+            "given": "User selects option 3, enters num1='abc' and num2=5",
+            "when": "main_calculator_loop is called and user completes the operation",
+            "then": "Error message is shown or input is rejected"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_negative_menu_choice_invalid",
-          "name": "invalid_menu_choice",
-          "description": "Handles invalid menu option selection.",
+          "id": "multiplication_menu_invalid_option",
+          "name": "test_invalid_menu_option",
+          "description": "Verify that entering an invalid menu option is handled gracefully.",
           "type": "negative",
           "test_setup": {
-            "given": "User enters 9 as the menu choice.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The program displays an error message or prompts the user to enter a valid option."
+            "given": "User enters menu option 9",
+            "when": "main_calculator_loop is called",
+            "then": "Error message is shown or user is prompted again"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_negative_blank_input",
-          "name": "blank_input_for_numbers",
-          "description": "Handles blank input for one or both numbers.",
+          "id": "multiplication_exit_flow",
+          "name": "test_exit_option",
+          "description": "Verify that selecting the exit option terminates the loop.",
+          "type": "positive",
+          "test_setup": {
+            "given": "User selects option 5",
+            "when": "main_calculator_loop is called",
+            "then": "'Exiting...' is printed and loop terminates"
+          },
+          "implementation_id": "cal_py_main_loop"
+        },
+        {
+          "id": "multiplication_blank_input",
+          "name": "test_blank_input_for_numbers",
+          "description": "Verify that blank input for numbers is handled gracefully.",
           "type": "negative",
           "test_setup": {
-            "given": "User selects subtraction (option 2), enters '' (blank) as the first number and 5 as the second number.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The program displays an error message indicating invalid input."
+            "given": "User selects option 3, enters blank for num1 or num2",
+            "when": "main_calculator_loop is called",
+            "then": "Error message is shown or input is rejected"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_exit",
-          "name": "exit_option",
-          "description": "User selects the exit option to terminate the calculator.",
+          "id": "multiplication_menu_loop_continuity",
+          "name": "test_menu_loop_continuity",
+          "description": "Verify that after a valid operation, the menu is shown again for further operations.",
           "type": "positive",
           "test_setup": {
-            "given": "User selects option 5 from the menu.",
-            "when": "The main calculator loop processes the input.",
-            "then": "The program prints 'Exiting...' and terminates the loop."
+            "given": "User selects option 3, completes multiplication, then selects option 1",
+            "when": "main_calculator_loop is called",
+            "then": "Menu is displayed again after multiplication"
           },
           "implementation_id": "cal_py_main_loop"
         },
         {
-          "id": "subtraction_positive_blank_line_after_operation",
-          "name": "blank_line_after_operation",
-          "description": "Ensures a blank line is printed after each operation.",
-          "type": "positive",
+          "id": "multiplication_division_by_zero",
+          "name": "test_division_by_zero",
+          "description": "Verify that division by zero is handled gracefully.",
+          "type": "negative",
           "test_setup": {
-            "given": "User performs any operation (e.g., subtraction).",
-            "when": "The main calculator loop processes the input.",
-            "then": "A blank line is printed after displaying the result."
+            "given": "User selects option 4, enters num1=5 and num2=0",
+            "when": "main_calculator_loop is called",
+            "then": "Error message is shown or division by zero is handled"
           },
           "implementation_id": "cal_py_main_loop"
         }
