@@ -15,4 +15,5 @@ while 1:
         print('Exiting...')
         break
     else:
-        print("Invalid input...please try again")
+
+        print("Invalid input...please try")
