@@ -4,14 +4,14 @@ smtp_port = 465 # For SSL
 sender_email = "your_email@gmail.com"
 receiver_email = "receiver_email@example.com"
 password = "your_app_password"
-Sender email and password should be stored in the configuration
+Sender email and password should be stored in the configuration file in code
 
 
 # API end point for password reset
 /auth/password-reset
 
 #OTP Expiry Duration
-OTP Expiry Duration should be standard of 30 second
+OTP Expiry Duration should be standard of 30 second. OTP can be stored in the DB
 
 #Password Encryption Algorithm
 we will use SHA-2(SHA-256) for password encription
