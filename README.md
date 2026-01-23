@@ -14,7 +14,7 @@ Sender email and password should be stored in the configuration
 OTP Expiry Duration should be standard of 30 second
 
 #Password Encryption Algorithm
-we will use SHA-2 for password encription
+we will use SHA-2(SHA-256) for password encription
 
 #Password Reset Flow Details
 we will send OPT for email and ask user to enter the OTP in our portal and ask him to use give new password and confirm password to reset
