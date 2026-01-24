@@ -7,7 +7,6 @@ password = "your_app_password"
 Sender email and password should be stored in the configuration file in code
 
 
-
 # API end point for password reset
 /auth/password-reset
 accepts password and return redirection for login screen
