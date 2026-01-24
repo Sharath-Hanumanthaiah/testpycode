@@ -13,6 +13,18 @@ accepts password and return redirection for login screen
 
 #OTP Expiry Duration
 OTP Expiry Duration should be standard of 30 second. OTP can be stored in the DB
+table schema
+id              BIGSERIAL PRIMARY KEY,
+user_id         BIGINT NOT NULL,
+otp_hash        VARCHAR(255) NOT NULL,
+purpose         VARCHAR(50) NOT NULL,
+channel         VARCHAR(20) NOT NULL,
+expires_at      TIMESTAMP WITH TIME ZONE NOT NULL,
+consumed_at     TIMESTAMP WITH TIME ZONE,
+attempts        SMALLINT NOT NULL DEFAULT 0,
+max_attempts    SMALLINT NOT NULL DEFAULT 5,
+created_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+updated_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
 
 #Password Encryption Algorithm
 we will use SHA-2(SHA-256) for password encription
