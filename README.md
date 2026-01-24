@@ -1,9 +1,9 @@
-For Email Service Provider Selection we use smtplib python library with below configuration
-smtp_server = "smtp.gmail.com"
-smtp_port = 465 # For SSL
-sender_email = "your_email@gmail.com"
-receiver_email = "receiver_email@example.com"
-password = "your_app_password"
+For Email Service Provider Selection we use nodemailer library with below configuration
+SMTP_HOST=your.smtp.server.com
+SMTP_PORT=587
+SMTP_USER=your_username
+SMTP_PASS=your_password
+FROM_EMAIL=sender@example.com
 Sender email and password should be stored in the configuration file in code
 
 # API end point for password reset
