@@ -9,6 +9,7 @@ Sender email and password should be stored in the configuration file in code
 
 # API end point for password reset
 /auth/password-reset
+accepts password and return redirection for login screen
 
 #OTP Expiry Duration
 OTP Expiry Duration should be standard of 30 second. OTP can be stored in the DB
