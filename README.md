@@ -40,3 +40,16 @@ Length: Minimum of 8-12 characters, with 14+ or longer passphrases recommended.
 Character Types: Combination of uppercase (A-Z), lowercase (a-z), numbers (0-9), and symbols (!@#$%^&* etc.).
 Uniqueness: Password must not match previous passwords and should be unique to the account.
 Avoidance: Not containing account names, real names, or dictionary words.
+
+
+#Validation Rules for Profile Attributes
+use the standard approch so it give the best.
+
+#Profile Picture Upload Specifications
+upload to local file storage so keep it in project only
+
+#API Endpoints for Editing Work, Location, Social Links, Profile Picture, and Bio
+use it same as sturcture as  post API but it should be put 
+
+
+
