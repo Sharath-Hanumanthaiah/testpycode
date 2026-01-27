@@ -1,53 +1,76 @@
-For Email Service Provider Selection we use nodemailer library with below configuration
-SMTP_HOST=your.smtp.server.com
-SMTP_PORT=587
-SMTP_USER=your_username
-SMTP_PASS=your_password
-FROM_EMAIL=sender@example.com
-Sender email and password should be stored in the configuration file in code
+# ElevanceNet Auth System
 
-# API end point for password reset
-/auth/password-reset
-accepts password and return redirection for login scree
+## Features
+- User signup with email, password, firstName, lastName
+- Privacy and terms agreement required
+- Password complexity enforced (8-12 chars, upper/lower/number/symbol, not previous or name)
+- Duplicate email check
+- OTP sent to email for verification (expires in 30s, max 5 attempts)
+- Email verification required before login
+- JWT authentication, cookies set on verification
+- All responses in standard JSON format
+- User activity logging (Winston)
+- Config via `.env` (see `.env.example`)
+- Scalable, RESTful, GDPR compliant
 
-#OTP Expiry Duration
-OTP Expiry Duration should be standard of 30 second. OTP can be stored in the DB
-table schema
-id              BIGSERIAL PRIMARY KEY,
-user_id         BIGINT NOT NULL,
-otp_hash        VARCHAR(255) NOT NULL,
-purpose         VARCHAR(50) NOT NULL,
-channel         VARCHAR(20) NOT NULL,
-expires_at      TIMESTAMP WITH TIME ZONE NOT NULL,
-consumed_at     TIMESTAMP WITH TIME ZONE,
-attempts        SMALLINT NOT NULL DEFAULT 0,
-max_attempts    SMALLINT NOT NULL DEFAULT 5,
-created_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-updated_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+## Folder Structure
+```
+src/
+  app.js
+  config/
+    .env.example
+    index.js
+  controllers/
+    authController.js
+  domain/
+    models/
+      User.js
+      Otp.js
+  infrastructure/
+    repositories/
+      userRepository.js
+      otpRepository.js
+  routes/
+    authRoutes.js
+  services/
+    authService.js
+    emailService.js
+  utils/
+    logger.js
+    passwordUtils.js
+    responseFormatter.js
+```
 
-#Password Encryption Algorithm
-we will use SHA-2(SHA-256) for password encription
+## Setup Instructions
+1. Copy `.env.example` to `.env` and fill in required values.
+2. Install dependencies:
+   ```bash
+   npm install express mongoose winston nodemailer jsonwebtoken cookie-parser dotenv
+   ```
+3. Start the server:
+   ```bash
+   node src/app.js
+   ```
 
-#Password Reset Flow Details
-we will send OPT for email and ask user to enter the OTP in our portal and ask him to use give new password and confirm password to reset
+## API Endpoints
+### POST /auth/signup
+- Body: `{ firstName, lastName, email, password, agreedToPrivacy, agreedToTerms }`
+- Returns: `{ success, message, data, errors, meta }`
 
-#JWT Token Expiry Duration
-30 mins will expiry time for JWT
+### POST /auth/verify
+- Body: `{ userId, otp }`
+- Returns: `{ success, message, data, errors, meta }`
 
-#Password Complexity Requirements
-Length: Minimum of 8-12 characters, with 14+ or longer passphrases recommended.
-Character Types: Combination of uppercase (A-Z), lowercase (a-z), numbers (0-9), and symbols (!@#$%^&* etc.).
-Uniqueness: Password must not match previous passwords and should be unique to the account.
-Avoidance: Not containing account names, real names, or dictionary words.
+## Notes
+- OTP expires in 30 seconds, max 5 attempts
+- Unverified users cannot log in
+- All user activities are logged
+- Passwords are encrypted with SHA-256
+- JWT secret and SMTP credentials must be set in `.env`
 
+## Deployment
+- Backend: Vercel/AWS
+- Frontend: Netlify (React.js)
 
-#Validation Rules for Profile Attributes
-use the standard approch so it give the best.
-
-#Profile Picture Upload Specifications
-upload to local file storage so keep it in project only
-
-#API Endpoints for Editing Work, Location, Social Links, Profile Picture, and Bio
-use it same as sturcture as  post API but it should be put 
-
-
+## License
+MIT
