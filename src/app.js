@@ -18,6 +18,9 @@ app.use((req, res, next) => {
 
 app.use('/auth', authRoutes);
 
+const reportRoutes = require('./routes/reportRoutes');
+app.use('/reports', reportRoutes);
+
 app.use((err, req, res, next) => {
   logger.error({ event: 'unhandled_error', error: err });
   res.status(500).json({ success: false, message: 'Internal server error', errors: [err.message] });
