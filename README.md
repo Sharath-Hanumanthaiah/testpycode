@@ -1,76 +1,50 @@
-# ElevanceNet Auth System
+# Reporting System for Inappropriate Content
+
+## Overview
+This project implements a production-ready reporting system for inappropriate or unprofessional posts. It follows clean architecture and industry standards for Node.js (Express.js), React.js, and MongoDB.
 
 ## Features
-- User signup with email, password, firstName, lastName
-- Privacy and terms agreement required
-- Password complexity enforced (8-12 chars, upper/lower/number/symbol, not previous or name)
-- Duplicate email check
-- OTP sent to email for verification (expires in 30s, max 5 attempts)
-- Email verification required before login
-- JWT authentication, cookies set on verification
-- All responses in standard JSON format
-- User activity logging (Winston)
-- Config via `.env` (see `.env.example`)
-- Scalable, RESTful, GDPR compliant
+- Users can report any post from the feed or post view.
+- Reports are stored in MongoDB and include reporting user, post, reason, status, and timestamps.
+- Moderators/administrators can retrieve and review all reports via RESTful API endpoints.
+- The status of each report can be updated and tracked (new, under_review, resolved).
+- All reporting actions are logged for security and debugging.
+- The reporting feature is accessible and responsive on both desktop and mobile devices.
+- All environment-specific values are managed via `.env` files.
 
 ## Folder Structure
-```
-src/
-  app.js
-  config/
-    .env.example
-    index.js
-  controllers/
-    authController.js
-  domain/
-    models/
-      User.js
-      Otp.js
-  infrastructure/
-    repositories/
-      userRepository.js
-      otpRepository.js
-  routes/
-    authRoutes.js
-  services/
-    authService.js
-    emailService.js
-  utils/
-    logger.js
-    passwordUtils.js
-    responseFormatter.js
-```
-
-## Setup Instructions
-1. Copy `.env.example` to `.env` and fill in required values.
-2. Install dependencies:
-   ```bash
-   npm install express mongoose winston nodemailer jsonwebtoken cookie-parser dotenv
-   ```
-3. Start the server:
-   ```bash
-   node src/app.js
-   ```
+- `src/domain/models/Report.js` — Mongoose model for reports
+- `src/infrastructure/repositories/reportRepository.js` — Data access for reports
+- `src/services/reportService.js` — Business logic for reporting
+- `src/controllers/reportController.js` — RESTful API endpoints
+- `src/routes/reportRoutes.js` — Express routes for reporting
+- `src/components/ReportButton.js` — React button to trigger reporting
+- `src/components/ReportModal.js` — React modal for submitting a report
+- `src/components/Post.js` — Example integration of reporting in a post
 
 ## API Endpoints
-### POST /auth/signup
-- Body: `{ firstName, lastName, email, password, agreedToPrivacy, agreedToTerms }`
-- Returns: `{ success, message, data, errors, meta }`
+- `POST /reports` — Report a post
+- `GET /reports` — Retrieve all reports (moderator/admin)
+- `PATCH /reports/:id/status` — Update report status (moderator/admin)
 
-### POST /auth/verify
-- Body: `{ userId, otp }`
-- Returns: `{ success, message, data, errors, meta }`
+## Environment Variables
+See `src/config/.env.example` for required configuration.
 
-## Notes
-- OTP expires in 30 seconds, max 5 attempts
-- Unverified users cannot log in
-- All user activities are logged
-- Passwords are encrypted with SHA-256
-- JWT secret and SMTP credentials must be set in `.env`
+## Security & Logging
+- All user activities, including reporting, are logged using Winston.
+- Only authenticated users can report posts.
+- Only moderators/admins can review and update reports.
 
-## Deployment
-- Backend: Vercel/AWS
-- Frontend: Netlify (React.js)
+## Usage
+1. Ensure MongoDB and all environment variables are configured.
+2. Start the backend server (`node src/app.js` or via your process manager).
+3. Integrate the React components into your frontend.
+4. Deploy backend to AWS and frontend to Netlify as per your workflow.
+
+## Scalability & Best Practices
+- Clean, modular, and testable codebase.
+- Designed for high concurrency and future expansion.
+- Follows official style guides and linting standards.
 
 ## License
 MIT
