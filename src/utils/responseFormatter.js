@@ -1,7 +1,7 @@
 function formatResponse({ success, message, data = null, errors = null, meta = null }) {
   return {
-    success,
-    message,
+    success: !!success,
+    message: message || '',
     data,
     errors,
     meta,
