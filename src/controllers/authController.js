@@ -33,7 +33,47 @@ async function verify(req, res) {
   }
 }
 
+async function login(req, res) {
+  try {
+    const { email, password } = req.body;
+    const result = await require('../services/authService').login({ email, password });
+    logger.info({ event: 'login_attempt', email, status: result.status });
+    if (result.status === 200 && result.response.data && result.response.data.token) {
+      res.cookie('token', result.response.data.token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 30 * 60 * 1000, // 30 minutes
+      });
+    }
+    res.status(result.status).json(formatResponse(result.response));
+  } catch (error) {
+    logger.error({ event: 'login_error', error });
+    res.status(500).json(formatResponse({ success: false, message: 'Internal server error', errors: [error.message] }));
+  }
+}
+
+async function refreshToken(req, res) {
+  try {
+    const token = req.body.token || req.cookies.token;
+    const result = await require('../services/authService').refreshToken({ token });
+    logger.info({ event: 'token_refresh_attempt', status: result.status });
+    if (result.status === 200 && result.response.data && result.response.data.token) {
+      res.cookie('token', result.response.data.token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 30 * 60 * 1000,
+      });
+    }
+    res.status(result.status).json(formatResponse(result.response));
+  } catch (error) {
+    logger.error({ event: 'token_refresh_error', error });
+    res.status(500).json(formatResponse({ success: false, message: 'Internal server error', errors: [error.message] }));
+  }
+}
+
 module.exports = {
   signup,
   verify,
+  login,
+  refreshToken,
 };

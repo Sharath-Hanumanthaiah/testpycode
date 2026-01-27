@@ -7,7 +7,7 @@ module.exports = {
   mongodbUri: process.env.MONGODB_URI,
   jwt: {
     secret: process.env.JWT_SECRET,
-    expiresIn: process.env.JWT_EXPIRES_IN || '1d',
+    expiresIn: process.env.JWT_EXPIRY ? `${process.env.JWT_EXPIRY}s` : '1800s', // 30 min default
   },
   smtp: {
     host: process.env.SMTP_HOST,
