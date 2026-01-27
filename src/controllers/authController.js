@@ -33,7 +33,41 @@ async function verify(req, res) {
   }
 }
 
+}
+
+async function verify(req, res) {
+  try {
+    const { userId, otp } = req.body;
+    const result = await authService.verifyOtp({ userId, otp });
+    logger.info({ event: 'verify_attempt', userId, status: result.status });
+    if (result.status === 200 && result.response.data && result.response.data.token) {
+      res.cookie('token', result.response.data.token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 24 * 60 * 60 * 1000,
+      });
+    }
+    res.status(result.status).json(formatResponse(result.response));
+  } catch (error) {
+    logger.error({ event: 'verify_error', error });
+    res.status(500).json(formatResponse({ success: false, message: 'Internal server error', errors: [error.message] }));
+  }
+}
+
+async function sendPasswordReset(req, res) {
+  try {
+    const { email, resetToken } = req.body;
+    const result = await authService.sendPasswordReset({ email, resetToken });
+    logger.info({ event: 'password_reset_attempt', email, status: result.status });
+    res.status(result.status).json(formatResponse(result.response));
+  } catch (error) {
+    logger.error({ event: 'password_reset_error', error });
+    res.status(500).json(formatResponse({ success: false, message: 'Internal server error', errors: [error.message] }));
+  }
+}
+
 module.exports = {
   signup,
   verify,
+  sendPasswordReset,
 };

@@ -88,7 +88,25 @@ async function verifyOtp({ userId, otp }) {
   return { status: 200, response: { success: true, message: 'Email verified, authentication granted', data: { token } } };
 }
 
+  await sendOtpEmail(email, otp);
+  return { status: 200, response: { success: true, message: 'Signup successful, OTP sent to email', data: { userId: user._id } } };
+}
+
+async function sendPasswordReset({ email, resetToken }) {
+  const user = await userRepo.findByEmail(email);
+  if (!user) {
+    return { status: 404, response: { success: false, message: 'User not found', errors: ['User not found'] } };
+  }
+  const sent = await require('./emailService').sendPasswordResetEmail(email, resetToken);
+  if (!sent) {
+    return { status: 500, response: { success: false, message: 'Failed to send password reset email', errors: ['Email delivery failed'] } };
+  }
+  logger.info({ event: 'password_reset_email_sent', email });
+  return { status: 200, response: { success: true, message: 'Password reset email sent', data: null } };
+}
+
 module.exports = {
   signup,
   verifyOtp,
+  sendPasswordReset,
 };
