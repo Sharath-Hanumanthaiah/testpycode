@@ -17,6 +17,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/auth', authRoutes);
+const postRoutes = require('./routes/postRoutes');
+app.use('/posts', postRoutes);
 
 app.use((err, req, res, next) => {
   logger.error({ event: 'unhandled_error', error: err });
