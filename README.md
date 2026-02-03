@@ -12,7 +12,6 @@
 - User activity logging (Winston)
 - Config via `.env` (see `.env.example`)
 - Scalable, RESTful, GDPR compliant
-
 ## Folder Structure
 ```
 src/
