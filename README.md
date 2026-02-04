@@ -7,7 +7,6 @@
 - Duplicate email check
 - OTP sent to email for verification (expires in 30s, max 5 attempts)
 - Email verification required before login
-- JWT authentication, cookies set on verification
 - All responses in standard JSON format
 - User activity logging (Winston)
 - Config via `.env` (see `.env.example`)
@@ -65,7 +64,7 @@ src/
 - Unverified users cannot log in
 - All user activities are logged
 - Passwords are encrypted with SHA-256
-- JWT secret and SMTP credentials must be set in `.env`
+- SMTP credentials must be set in `.env`
 
 ## Deployment
 - Backend: Vercel/AWS
