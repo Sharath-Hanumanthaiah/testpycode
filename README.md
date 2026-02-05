@@ -1,5 +1,6 @@
 # ElevanceNet Auth System
 
+
 ## Features
 - User signup with email, password, firstName, lastName
 - Privacy and terms agreement required
