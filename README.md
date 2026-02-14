@@ -28,8 +28,6 @@ A simple Task Tracker application to manage tasks and users with a lightweight i
 - No external storage (e.g., database, files).
 - All data stored in **variables (in-memory)**.
 
----
-
 ## Deliverables
 
 - **Python source code** organized into modules:
