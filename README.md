@@ -16,13 +16,6 @@ A simple Task Tracker application to manage tasks and users with a lightweight i
   - **Due Date**
   - **Priority**
 
-### 4. View Tasks
-- View tasks using filters:
-  - By **Status**
-  - By **Due Date**
-  - By **Priority**
-
-
 ### 6. Storage
 - No external storage (e.g., database, files).
 - All data stored in **variables (in-memory)**.
