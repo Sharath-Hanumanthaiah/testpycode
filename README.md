@@ -15,7 +15,6 @@ A  simple Task Tracker  application to manage tasks and us ers with a  light wei
   - **Status**:         
   - "lastupdatedat"
  
-   
 ### 3. Assign & Reassign Tasks
 - Assign one or more users to a task.
 - Reassigning updates the task’s assignees without deleting the task.
