@@ -5,16 +5,6 @@ A  simple Task Tracker  application to manage tasks and us ers with a  light wei
        
 ## Features         
 
-
-### 1. CRUD for Tasks  
-- Create, Read, Update, Delete tasks. 
-- Status should be active during crea tion
-- Each task should have:    
-  - **Unique ID* *   
-  - **Title**     
-  - **Descri ption**    
-  - **Status**:         
-  - "lastupdatedat"
  
 ### 3. Assign & Reassign Tasks
 - Assign one or more users to a task.
