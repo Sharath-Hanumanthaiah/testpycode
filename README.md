@@ -42,5 +42,3 @@ A  simple Task Tracker  application to manage tasks and us ers with a  light wei
 - **UI** to interact with the application.
 - **requirements.txt** file for dependencies.
 - **README.md** file with setup and usage instructions.
-
----
